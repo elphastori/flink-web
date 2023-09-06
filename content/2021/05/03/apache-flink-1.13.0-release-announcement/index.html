@@ -21,7 +21,7 @@ The release brings us a big step forward in one of our major efforts: Making Str
 <title>Apache Flink 1.13.0 Release Announcement | Apache Flink</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.1684828e5993e3654b337fdd65c8992f2ebf74bd3d2aa60c4e02433057fbd5bb.css" integrity="sha256-FoSCjlmT42VLM3/dZciZLy6/dL09KqYMTgJDMFf71bs=">
+<link rel="stylesheet" href="/book.min.5f4db6aab7806e612cf2cda76108d5d27ec21cf81dbf884becdeb85457062ac6.css" integrity="sha256-X022qreAbmEs8s2nYQjV0n7CHPgdv4hL7N64VFcGKsY=">
 <script defer src="/en.search.min.1e52ae623c5dfc48c431d62cf754c9626056cfdc2c293bb1a8d7e5b9d0960475.js" integrity="sha256-HlKuYjxd/EjEMdYs91TJYmBWz9wsKTuxqNfludCWBHU="></script>
 <!--
 Made with Book Theme
@@ -420,8 +420,62 @@ https://github.com/alex-shpak/hugo-book
 </nav> 
 
   
-  <main class="container flex"> 
-    <div class="book-page">
+  <main class="flex">
+    
+      <aside class="book-toc">
+        
+
+
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
+  <ul>
+    <li><a href="#notable-features">Notable features</a>
+      <ul>
+        <li><a href="#reactive-scaling">Reactive scaling</a></li>
+        <li><a href="#analyzing-application-performance">Analyzing application performance</a></li>
+        <li><a href="#switching-state-backend-with-savepoints">Switching State Backend with savepoints</a></li>
+        <li><a href="#user-specified-pod-templates-for-kubernetes-deployments">User-specified pod templates for Kubernetes deployments</a></li>
+        <li><a href="#unaligned-checkpoints---production-ready">Unaligned Checkpoints - production-ready</a></li>
+        <li><a href="#machine-learning-library-moving-to-a-separate-repository">Machine Learning Library moving to a separate repository</a></li>
+      </ul>
+    </li>
+    <li><a href="#notable-sql--table-api-improvements">Notable SQL &amp; Table API improvements</a>
+      <ul>
+        <li><a href="#windows-via-table-valued-functions">Windows via Table-valued functions</a></li>
+        <li><a href="#improved-interoperability-between-datastream-api-and-table-apisql">Improved interoperability between DataStream API and Table API/SQL</a></li>
+        <li><a href="#sql-client-init-scripts-and-statement-sets">SQL Client: Init scripts and Statement Sets</a></li>
+        <li><a href="#hive-query-syntax-compatibility">Hive query syntax compatibility</a></li>
+        <li><a href="#improved-behavior-of-sql-time-functions">Improved behavior of SQL time functions</a></li>
+      </ul>
+    </li>
+    <li><a href="#notable-pyflink-improvements">Notable PyFlink improvements</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#stateful-operations-in-the-python-datastream-api">Stateful operations in the Python DataStream API</a></li>
+            <li><a href="#user-defined-windows-in-the-pyflink-datastream-api">User-defined Windows in the PyFlink DataStream API</a></li>
+            <li><a href="#row-based-operation-in-the-pyflink-table-api">Row-based operation in the PyFlink Table API</a></li>
+            <li><a href="#batch-execution-mode-for-pyflink-datastream-programs">Batch execution mode for PyFlink DataStream programs</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#other-improvements">Other improvements</a></li>
+    <li><a href="#changes-to-consider-when-upgrading-to-flink-113">Changes to consider when upgrading to Flink 1.13</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#list-of-contributors">List of Contributors</a></li>
+  </ul>
+</nav>
+
+ 
+      </aside>
+      <aside class="expand-toc hidden">
+        <a class="toc" onclick="expandToc()" href="javascript:void(0)">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+      </aside>
+    
+
+    <div class="container book-page">
       <header class="book-header">
         
   
@@ -449,7 +503,7 @@ https://github.com/alex-shpak/hugo-book
     
 
 
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
   <ul>
     <li><a href="#notable-features">Notable features</a>
       <ul>
@@ -495,7 +549,7 @@ https://github.com/alex-shpak/hugo-book
  
       </header>
 
-    
+
       
 
 
@@ -1042,12 +1096,8 @@ zhangzhengqi3, zhao_wei_nan, zhaown, zhaoxing, Zhenghua Gao, Zhenqiu Huang, zhis
 zhushang, zhuxiaoshang, Zhu Zhu, zjuwangg, zoucao, zoudan, 左元, 星, 肖佳文, 龙三</p>
 </p>
 </article>
- Page Content
+ 
       
-
-      <footer class="book-footer">
-        
-      </footer>
 
       
   
@@ -1059,60 +1109,6 @@ zhushang, zhuxiaoshang, Zhu Zhu, zjuwangg, zoucao, zoudan, 左元, 星, 肖佳�
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
-
-    
-    <aside class="book-toc">
-      
-
-
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
-  <ul>
-    <li><a href="#notable-features">Notable features</a>
-      <ul>
-        <li><a href="#reactive-scaling">Reactive scaling</a></li>
-        <li><a href="#analyzing-application-performance">Analyzing application performance</a></li>
-        <li><a href="#switching-state-backend-with-savepoints">Switching State Backend with savepoints</a></li>
-        <li><a href="#user-specified-pod-templates-for-kubernetes-deployments">User-specified pod templates for Kubernetes deployments</a></li>
-        <li><a href="#unaligned-checkpoints---production-ready">Unaligned Checkpoints - production-ready</a></li>
-        <li><a href="#machine-learning-library-moving-to-a-separate-repository">Machine Learning Library moving to a separate repository</a></li>
-      </ul>
-    </li>
-    <li><a href="#notable-sql--table-api-improvements">Notable SQL &amp; Table API improvements</a>
-      <ul>
-        <li><a href="#windows-via-table-valued-functions">Windows via Table-valued functions</a></li>
-        <li><a href="#improved-interoperability-between-datastream-api-and-table-apisql">Improved interoperability between DataStream API and Table API/SQL</a></li>
-        <li><a href="#sql-client-init-scripts-and-statement-sets">SQL Client: Init scripts and Statement Sets</a></li>
-        <li><a href="#hive-query-syntax-compatibility">Hive query syntax compatibility</a></li>
-        <li><a href="#improved-behavior-of-sql-time-functions">Improved behavior of SQL time functions</a></li>
-      </ul>
-    </li>
-    <li><a href="#notable-pyflink-improvements">Notable PyFlink improvements</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#stateful-operations-in-the-python-datastream-api">Stateful operations in the Python DataStream API</a></li>
-            <li><a href="#user-defined-windows-in-the-pyflink-datastream-api">User-defined Windows in the PyFlink DataStream API</a></li>
-            <li><a href="#row-based-operation-in-the-pyflink-table-api">Row-based operation in the PyFlink Table API</a></li>
-            <li><a href="#batch-execution-mode-for-pyflink-datastream-programs">Batch execution mode for PyFlink DataStream programs</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#other-improvements">Other improvements</a></li>
-    <li><a href="#changes-to-consider-when-upgrading-to-flink-113">Changes to consider when upgrading to Flink 1.13</a></li>
-    <li><a href="#resources">Resources</a></li>
-    <li><a href="#list-of-contributors">List of Contributors</a></li>
-  </ul>
-</nav>
-
- 
-    </aside>
-    <aside class="expand-toc">
-      <button class="toc" onclick="expandToc()">
-        <i class="fa fa-expand" aria-hidden="true"></i>
-      </button>
-    </aside>
-    
   </main> 
 
   

@@ -23,7 +23,7 @@ We encourage everyone to download the release and check out the documentation." 
 <title>Apache Flink 1.4.0 Release Announcement | Apache Flink</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.1684828e5993e3654b337fdd65c8992f2ebf74bd3d2aa60c4e02433057fbd5bb.css" integrity="sha256-FoSCjlmT42VLM3/dZciZLy6/dL09KqYMTgJDMFf71bs=">
+<link rel="stylesheet" href="/book.min.5f4db6aab7806e612cf2cda76108d5d27ec21cf81dbf884becdeb85457062ac6.css" integrity="sha256-X022qreAbmEs8s2nYQjV0n7CHPgdv4hL7N64VFcGKsY=">
 <script defer src="/en.search.min.1e52ae623c5dfc48c431d62cf754c9626056cfdc2c293bb1a8d7e5b9d0960475.js" integrity="sha256-HlKuYjxd/EjEMdYs91TJYmBWz9wsKTuxqNfludCWBHU="></script>
 <!--
 Made with Book Theme
@@ -422,8 +422,52 @@ https://github.com/alex-shpak/hugo-book
 </nav> 
 
   
-  <main class="container flex"> 
-    <div class="book-page">
+  <main class="flex">
+    
+      <aside class="book-toc">
+        
+
+
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#new-features-and-improvements">New Features and Improvements</a>
+          <ul>
+            <li><a href="#end-to-end-exactly-once-applications-with-apache-flink-and-apache-kafka-and-twophasecommitsinkfunction">End-to-end Exactly Once Applications with Apache Flink and Apache Kafka and TwoPhaseCommitSinkFunction</a></li>
+            <li><a href="#table-api-and-streaming-sql-enhancements">Table API and Streaming SQL Enhancements</a></li>
+            <li><a href="#a-significantly-improved-dependency-structure-and-reversed-class-loading">A Significantly-Improved Dependency Structure and Reversed Class Loading</a></li>
+            <li><a href="#hadoop-free-flink">Hadoop-free Flink</a></li>
+            <li><a href="#improvements-to-flink-internals">Improvements to Flink Internals</a></li>
+            <li><a href="#improvements-to-the-queryable-state-client">Improvements to the Queryable State Client</a></li>
+            <li><a href="#metrics-and-monitoring">Metrics and Monitoring</a></li>
+            <li><a href="#connector-improvements-and-fixes">Connector improvements and fixes</a></li>
+          </ul>
+        </li>
+        <li><a href="#release-notes---please-read">Release Notes - Please Read</a>
+          <ul>
+            <li><a href="#changes-to-dynamic-class-loading-of-user-code">Changes to dynamic class loading of user code</a></li>
+            <li><a href="#no-more-avro-dependency-included-by-default">No more Avro dependency included by default</a></li>
+            <li><a href="#hadoop-free-flink-1">Hadoop-free Flink</a></li>
+            <li><a href="#bundled-s3-filesystems">Bundled S3 FileSystems</a></li>
+          </ul>
+        </li>
+        <li><a href="#list-of-contributors">List of Contributors</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+      </aside>
+      <aside class="expand-toc hidden">
+        <a class="toc" onclick="expandToc()" href="javascript:void(0)">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+      </aside>
+    
+
+    <div class="container book-page">
       <header class="book-header">
         
   
@@ -451,7 +495,7 @@ https://github.com/alex-shpak/hugo-book
     
 
 
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
   <ul>
     <li>
       <ul>
@@ -487,7 +531,7 @@ https://github.com/alex-shpak/hugo-book
  
       </header>
 
-    
+
       
 
 
@@ -717,12 +761,8 @@ bretschneider, sunjincheng121, tedyu, twalthr, uybhatti, wangmiao1981, yew1eb, z
 zhangminglei, zhe li, zhouhai02, zjureel, 付典, 军长, 宝牛, 淘江, 金竹</p>
 </p>
 </article>
- Page Content
+ 
       
-
-      <footer class="book-footer">
-        
-      </footer>
 
       
   
@@ -734,50 +774,6 @@ zhangminglei, zhe li, zhouhai02, zjureel, 付典, 军长, 宝牛, 淘江, 金竹
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
-
-    
-    <aside class="book-toc">
-      
-
-
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#new-features-and-improvements">New Features and Improvements</a>
-          <ul>
-            <li><a href="#end-to-end-exactly-once-applications-with-apache-flink-and-apache-kafka-and-twophasecommitsinkfunction">End-to-end Exactly Once Applications with Apache Flink and Apache Kafka and TwoPhaseCommitSinkFunction</a></li>
-            <li><a href="#table-api-and-streaming-sql-enhancements">Table API and Streaming SQL Enhancements</a></li>
-            <li><a href="#a-significantly-improved-dependency-structure-and-reversed-class-loading">A Significantly-Improved Dependency Structure and Reversed Class Loading</a></li>
-            <li><a href="#hadoop-free-flink">Hadoop-free Flink</a></li>
-            <li><a href="#improvements-to-flink-internals">Improvements to Flink Internals</a></li>
-            <li><a href="#improvements-to-the-queryable-state-client">Improvements to the Queryable State Client</a></li>
-            <li><a href="#metrics-and-monitoring">Metrics and Monitoring</a></li>
-            <li><a href="#connector-improvements-and-fixes">Connector improvements and fixes</a></li>
-          </ul>
-        </li>
-        <li><a href="#release-notes---please-read">Release Notes - Please Read</a>
-          <ul>
-            <li><a href="#changes-to-dynamic-class-loading-of-user-code">Changes to dynamic class loading of user code</a></li>
-            <li><a href="#no-more-avro-dependency-included-by-default">No more Avro dependency included by default</a></li>
-            <li><a href="#hadoop-free-flink-1">Hadoop-free Flink</a></li>
-            <li><a href="#bundled-s3-filesystems">Bundled S3 FileSystems</a></li>
-          </ul>
-        </li>
-        <li><a href="#list-of-contributors">List of Contributors</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
- 
-    </aside>
-    <aside class="expand-toc">
-      <button class="toc" onclick="expandToc()">
-        <i class="fa fa-expand" aria-hidden="true"></i>
-      </button>
-    </aside>
-    
   </main> 
 
   

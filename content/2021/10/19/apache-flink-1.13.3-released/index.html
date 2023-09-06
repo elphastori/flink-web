@@ -27,7 +27,7 @@ Updated Maven dependencies:
 <title>Apache Flink 1.13.3 Released | Apache Flink</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.1684828e5993e3654b337fdd65c8992f2ebf74bd3d2aa60c4e02433057fbd5bb.css" integrity="sha256-FoSCjlmT42VLM3/dZciZLy6/dL09KqYMTgJDMFf71bs=">
+<link rel="stylesheet" href="/book.min.5f4db6aab7806e612cf2cda76108d5d27ec21cf81dbf884becdeb85457062ac6.css" integrity="sha256-X022qreAbmEs8s2nYQjV0n7CHPgdv4hL7N64VFcGKsY=">
 <script defer src="/en.search.min.1e52ae623c5dfc48c431d62cf754c9626056cfdc2c293bb1a8d7e5b9d0960475.js" integrity="sha256-HlKuYjxd/EjEMdYs91TJYmBWz9wsKTuxqNfludCWBHU="></script>
 <!--
 Made with Book Theme
@@ -426,8 +426,36 @@ https://github.com/alex-shpak/hugo-book
 </nav> 
 
   
-  <main class="container flex"> 
-    <div class="book-page">
+  <main class="flex">
+    
+      <aside class="book-toc">
+        
+
+
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#propagate-unique-keys-for-fromchangelogstream-flink-24033httpsissuesapacheorgjirabrowseflink-24033">Propagate unique keys for <code>fromChangelogStream</code> (<a href="https://issues.apache.org/jira/browse/FLINK-24033">FLINK-24033</a>)</a></li>
+        <li><a href="#table-api-primary-key-feature-was-not-working-correctly-flink-23895httpsissuesapacheorgjirabrowseflink-23895-flink-20374httpsissuesapacheorgjirabrowseflink-20374">Table API &lsquo;Primary Key&rsquo; feature was not working correctly (<a href="https://issues.apache.org/jira/browse/FLINK-23895">FLINK-23895</a> <a href="https://issues.apache.org/jira/browse/FLINK-20374">FLINK-20374</a>)</a></li>
+        <li><a href="#clarify-sourcefunctioncancel-contract-about-interrupting-flink-23527httpsissuesapacheorgjirabrowseflink-23527">Clarify <code>SourceFunction#cancel()</code> contract about interrupting (<a href="https://issues.apache.org/jira/browse/FLINK-23527">FLINK-23527</a>)</a></li>
+        <li><a href="#taskmanagerslottimeout-falls-back-to-akkaasktimeout-flink-22002httpsissuesapacheorgjirabrowseflink-22002"><code>taskmanager.slot.timeout</code> falls back to <code>akka.ask.timeout</code> (<a href="https://issues.apache.org/jira/browse/FLINK-22002">FLINK-22002</a>)</a></li>
+        <li><a href="#increase-akkaasktimeout-for-tests-using-the-minicluster-flink-23906httpsissuesapacheorgjirabrowseflink-23962">Increase <code>akka.ask.timeout</code> for tests using the MiniCluster (<a href="https://issues.apache.org/jira/browse/FLINK-23962">FLINK-23906</a>)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+      </aside>
+      <aside class="expand-toc hidden">
+        <a class="toc" onclick="expandToc()" href="javascript:void(0)">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+      </aside>
+    
+
+    <div class="container book-page">
       <header class="book-header">
         
   
@@ -455,7 +483,7 @@ https://github.com/alex-shpak/hugo-book
     
 
 
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
   <ul>
     <li>
       <ul>
@@ -475,7 +503,7 @@ https://github.com/alex-shpak/hugo-book
  
       </header>
 
-    
+
       
 
 
@@ -554,12 +582,8 @@ The change is due to the fact that messages cannot get lost in a single-process 
 The increased timeout reduces the number of false-positive timeouts, for example during heavy tests on loaded CI/CD workers or during debugging.</p>
 </p>
 </article>
- Page Content
+ 
       
-
-      <footer class="book-footer">
-        
-      </footer>
 
       
   
@@ -571,34 +595,6 @@ The increased timeout reduces the number of false-positive timeouts, for example
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
-
-    
-    <aside class="book-toc">
-      
-
-
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#propagate-unique-keys-for-fromchangelogstream-flink-24033httpsissuesapacheorgjirabrowseflink-24033">Propagate unique keys for <code>fromChangelogStream</code> (<a href="https://issues.apache.org/jira/browse/FLINK-24033">FLINK-24033</a>)</a></li>
-        <li><a href="#table-api-primary-key-feature-was-not-working-correctly-flink-23895httpsissuesapacheorgjirabrowseflink-23895-flink-20374httpsissuesapacheorgjirabrowseflink-20374">Table API &lsquo;Primary Key&rsquo; feature was not working correctly (<a href="https://issues.apache.org/jira/browse/FLINK-23895">FLINK-23895</a> <a href="https://issues.apache.org/jira/browse/FLINK-20374">FLINK-20374</a>)</a></li>
-        <li><a href="#clarify-sourcefunctioncancel-contract-about-interrupting-flink-23527httpsissuesapacheorgjirabrowseflink-23527">Clarify <code>SourceFunction#cancel()</code> contract about interrupting (<a href="https://issues.apache.org/jira/browse/FLINK-23527">FLINK-23527</a>)</a></li>
-        <li><a href="#taskmanagerslottimeout-falls-back-to-akkaasktimeout-flink-22002httpsissuesapacheorgjirabrowseflink-22002"><code>taskmanager.slot.timeout</code> falls back to <code>akka.ask.timeout</code> (<a href="https://issues.apache.org/jira/browse/FLINK-22002">FLINK-22002</a>)</a></li>
-        <li><a href="#increase-akkaasktimeout-for-tests-using-the-minicluster-flink-23906httpsissuesapacheorgjirabrowseflink-23962">Increase <code>akka.ask.timeout</code> for tests using the MiniCluster (<a href="https://issues.apache.org/jira/browse/FLINK-23962">FLINK-23906</a>)</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
- 
-    </aside>
-    <aside class="expand-toc">
-      <button class="toc" onclick="expandToc()">
-        <i class="fa fa-expand" aria-hidden="true"></i>
-      </button>
-    </aside>
-    
   </main> 
 
   

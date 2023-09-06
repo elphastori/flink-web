@@ -23,7 +23,7 @@ Contributors have a good contribution experience. Our reviews are structured and
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="alternate" hreflang="zh" href="https://flink.apache.org/zh/how-to-contribute/reviewing-prs/" title="审核 Pull Request">
 
-<link rel="stylesheet" href="/book.min.1684828e5993e3654b337fdd65c8992f2ebf74bd3d2aa60c4e02433057fbd5bb.css" integrity="sha256-FoSCjlmT42VLM3/dZciZLy6/dL09KqYMTgJDMFf71bs=">
+<link rel="stylesheet" href="/book.min.5f4db6aab7806e612cf2cda76108d5d27ec21cf81dbf884becdeb85457062ac6.css" integrity="sha256-X022qreAbmEs8s2nYQjV0n7CHPgdv4hL7N64VFcGKsY=">
 <script defer src="/en.search.min.1e52ae623c5dfc48c431d62cf754c9626056cfdc2c293bb1a8d7e5b9d0960475.js" integrity="sha256-HlKuYjxd/EjEMdYs91TJYmBWz9wsKTuxqNfludCWBHU="></script>
 <!--
 Made with Book Theme
@@ -422,8 +422,41 @@ https://github.com/alex-shpak/hugo-book
 </nav> 
 
   
-  <main class="container flex"> 
-    <div class="book-page">
+  <main class="flex">
+    
+      <aside class="book-toc">
+        
+  
+
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
+  <ul>
+    <li><a href="#how-to-review-a-pull-request">How to Review a Pull Request</a>
+      <ul>
+        <li><a href="#review-checklist">Review Checklist</a>
+          <ul>
+            <li><a href="#1-is-the-contribution-well-described">1. Is the Contribution Well-Described?</a></li>
+            <li><a href="#2-is-there-consensus-that-the-change-or-feature-should-go-into-flink">2. Is There Consensus that the Change or Feature Should Go into Flink?</a></li>
+            <li><a href="#3-does-the-contribution-need-attention-from-some-specific-committers-and-is-there-time-commitment-from-these-committers">3. Does the Contribution Need Attention from some Specific Committers and Is There Time Commitment from These Committers?</a></li>
+            <li><a href="#4-does-the-implementation-follow-the-agreed-upon-overall-approacharchitecture">4. Does the Implementation Follow the Agreed Upon Overall Approach/Architecture?</a></li>
+            <li><a href="#5-is-the-overall-code-quality-good-meeting-standard-we-want-to-maintain-in-flink">5. Is the Overall Code Quality Good, Meeting Standard we Want to Maintain in Flink?</a></li>
+            <li><a href="#6-are-the-english-and-chinese-documentation-updated">6. Are the English and Chinese documentation updated?</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+      </aside>
+      <aside class="expand-toc hidden">
+        <a class="toc" onclick="expandToc()" href="javascript:void(0)">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+      </aside>
+    
+
+    <div class="container book-page">
       <header class="book-header">
         
   
@@ -451,7 +484,7 @@ https://github.com/alex-shpak/hugo-book
     
   
 
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
   <ul>
     <li><a href="#how-to-review-a-pull-request">How to Review a Pull Request</a>
       <ul>
@@ -476,7 +509,7 @@ https://github.com/alex-shpak/hugo-book
  
       </header>
 
-    
+
       
 
 
@@ -561,12 +594,8 @@ If the implementation is different from the agreed approach in the consensus dis
 <p>If the pull request introduces a new feature, the feature should be documented. The Flink community is maintaining both an English and a Chinese documentation. So both documentations should be updated. If you are not familiar with the Chinese language, please open a Jira assigned to the <code>chinese-translation</code> component for Chinese documentation translation and link it with current Jira issue. If you are familiar with Chinese language, you are encouraged to update both sides in one pull request.</p>
 <p>See more about how to <a href="/how-to-contribute/contribute-documentation/">contribute documentation</a>.</p>
 </article>
- Page Content
+ 
       
-
-      <footer class="book-footer">
-        
-      </footer>
 
       
   
@@ -578,39 +607,6 @@ If the implementation is different from the agreed approach in the consensus dis
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
-
-    
-    <aside class="book-toc">
-      
-  
-
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
-  <ul>
-    <li><a href="#how-to-review-a-pull-request">How to Review a Pull Request</a>
-      <ul>
-        <li><a href="#review-checklist">Review Checklist</a>
-          <ul>
-            <li><a href="#1-is-the-contribution-well-described">1. Is the Contribution Well-Described?</a></li>
-            <li><a href="#2-is-there-consensus-that-the-change-or-feature-should-go-into-flink">2. Is There Consensus that the Change or Feature Should Go into Flink?</a></li>
-            <li><a href="#3-does-the-contribution-need-attention-from-some-specific-committers-and-is-there-time-commitment-from-these-committers">3. Does the Contribution Need Attention from some Specific Committers and Is There Time Commitment from These Committers?</a></li>
-            <li><a href="#4-does-the-implementation-follow-the-agreed-upon-overall-approacharchitecture">4. Does the Implementation Follow the Agreed Upon Overall Approach/Architecture?</a></li>
-            <li><a href="#5-is-the-overall-code-quality-good-meeting-standard-we-want-to-maintain-in-flink">5. Is the Overall Code Quality Good, Meeting Standard we Want to Maintain in Flink?</a></li>
-            <li><a href="#6-are-the-english-and-chinese-documentation-updated">6. Are the English and Chinese documentation updated?</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
- 
-    </aside>
-    <aside class="expand-toc">
-      <button class="toc" onclick="expandToc()">
-        <i class="fa fa-expand" aria-hidden="true"></i>
-      </button>
-    </aside>
-    
   </main> 
 
   

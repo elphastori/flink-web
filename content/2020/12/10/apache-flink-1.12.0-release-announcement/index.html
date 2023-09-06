@@ -23,7 +23,7 @@ The community has added support for efficient batch execution in the DataStream 
 <title>Apache Flink 1.12.0 Release Announcement | Apache Flink</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.1684828e5993e3654b337fdd65c8992f2ebf74bd3d2aa60c4e02433057fbd5bb.css" integrity="sha256-FoSCjlmT42VLM3/dZciZLy6/dL09KqYMTgJDMFf71bs=">
+<link rel="stylesheet" href="/book.min.5f4db6aab7806e612cf2cda76108d5d27ec21cf81dbf884becdeb85457062ac6.css" integrity="sha256-X022qreAbmEs8s2nYQjV0n7CHPgdv4hL7N64VFcGKsY=">
 <script defer src="/en.search.min.1e52ae623c5dfc48c431d62cf754c9626056cfdc2c293bb1a8d7e5b9d0960475.js" integrity="sha256-HlKuYjxd/EjEMdYs91TJYmBWz9wsKTuxqNfludCWBHU="></script>
 <!--
 Made with Book Theme
@@ -422,8 +422,48 @@ https://github.com/alex-shpak/hugo-book
 </nav> 
 
   
-  <main class="container flex"> 
-    <div class="book-page">
+  <main class="flex">
+    
+      <aside class="book-toc">
+        
+
+
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#new-features-and-improvements">New Features and Improvements</a>
+          <ul>
+            <li><a href="#batch-execution-mode-in-the-datastream-api">Batch Execution Mode in the DataStream API</a></li>
+            <li><a href="#new-data-sink-api-beta">New Data Sink API (Beta)</a></li>
+            <li><a href="#kubernetes-high-availability-ha-service">Kubernetes High Availability (HA) Service</a></li>
+            <li><a href="#other-improvements">Other Improvements</a></li>
+            <li><a href="#table-apisql-metadata-handling-in-sql-connectors">Table API/SQL: Metadata Handling in SQL Connectors</a></li>
+            <li><a href="#table-apisql-upsert-kafka-connector">Table API/SQL: Upsert Kafka Connector</a></li>
+            <li><a href="#table-apisql-support-for-temporal-table-joins-in-sql">Table API/SQL: Support for Temporal Table Joins in SQL</a></li>
+            <li><a href="#other-improvements-to-the-table-apisql">Other Improvements to the Table API/SQL</a></li>
+            <li><a href="#pyflink-python-datastream-api">PyFlink: Python DataStream API</a></li>
+            <li><a href="#other-improvements-to-pyflink">Other Improvements to PyFlink</a></li>
+          </ul>
+        </li>
+        <li><a href="#important-changes">Important Changes</a></li>
+        <li><a href="#release-notes">Release Notes</a></li>
+        <li><a href="#list-of-contributors">List of Contributors</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+      </aside>
+      <aside class="expand-toc hidden">
+        <a class="toc" onclick="expandToc()" href="javascript:void(0)">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+      </aside>
+    
+
+    <div class="container book-page">
       <header class="book-header">
         
   
@@ -451,7 +491,7 @@ https://github.com/alex-shpak/hugo-book
     
 
 
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
   <ul>
     <li>
       <ul>
@@ -483,7 +523,7 @@ https://github.com/alex-shpak/hugo-book
  
       </header>
 
-    
+
       
 
 
@@ -801,12 +841,8 @@ With the new release, Flink SQL supports <strong>metadata columns</strong> to re
 <p>Abhijit Shandilya, Aditya Agarwal, Alan Su, Alexander Alexandrov, Alexander Fedulov, Alexey Trenikhin, Aljoscha Krettek, Allen Madsen, Andrei Bulgakov, Andrey Zagrebin, Arvid Heise, Authuir, Bairos, Bartosz Krasinski, Benchao Li, Brandon, Brian Zhou, C08061, Canbin Zheng, Cedric Chen, Chesnay Schepler, Chris Nix, Congxian Qiu, DG-Wangtao, Da(Dash)Shen, Dan Hill, Daniel Magyar, Danish Amjad, Danny Chan, Danny Cranmer, David Anderson, Dawid Wysakowicz, Devin Thomson, Dian Fu, Dongxu Wang, Dylan Forciea, Echo Lee, Etienne Chauchot, Fabian Paul, Felipe Lolas, Fin-Chan, Fin-chan, Flavio Pompermaier, Flora Tao, Fokko Driesprong, Gao Yun, Gary Yao, Ghildiyal, GitHub, Grebennikov Roman, GuoWei Ma, Gyula Fora, Hequn Cheng, Herman, Hong Teoh, HuangXiao, HuangXingBo, Husky Zeng, Hyeonseop Lee, I. Raleigh, Ivan, Jacky Lau, Jark Wu, Jaskaran Bindra, Jeff Yang, Jeff Zhang, Jiangjie (Becket) Qin, Jiatao Tao, Jiayi Liao, Jiayi-Liao, Jiezhi.G, Jimmy.Zhou, Jindrich Vimr, Jingsong Lee, JingsongLi, Joey Echeverria, Juha Mynttinen, Jun Qin, Jörn Kottmann, Karim Mansour, Kevin Bohinski, Kezhu Wang, Konstantin Knauf, Kostas Kloudas, Kurt Young, Lee Do-Kyeong, Leonard Xu, Lijie Wang, Liu Jiangang, Lorenzo Nicora, LululuAlu, Luxios22, Marta Paes Moreira, Mateusz Sabat, Matthias Pohl, Maximilian Michels, Miklos Gergely, Milan Nikl, Nico Kruber, Niel Hu, Niels Basjes, Oleksandr Nitavskyi, Paul Lam, Peng, PengFei Li, PengchengLiu, Peter Huang, Piotr Nowojski, PoojaChandak, Qingsheng Ren, Qishang Zhong, Richard Deurwaarder, Richard Moorhead, Robert Metzger, Roc Marshal, Roey Shem Tov, Roman, Roman Khachatryan, Rong Rong, Rui Li, Seth Wiesman, Shawn Huang, ShawnHx, Shengkai, Shuiqiang Chen, Shuo Cheng, SteNicholas, Stephan Ewen, Steve Whelan, Steven Wu, Tartarus0zm, Terry Wang, Thesharing, Thomas Weise, Till Rohrmann, Timo Walther, TsReaper, Tzu-Li (Gordon) Tai, Ufuk Celebi, V1ncentzzZ, Vladimirs Kotovs, Wei Zhong, Weike DONG, XBaith, Xiaogang Zhou, Xiaoguang Sun, Xingcan Cui, Xintong Song, Xuannan, Yang Liu, Yangze Guo, Yichao Yang, Yikun Jiang, Yu Li, Yuan Mei, Yubin Li, Yun Gao, Yun Tang, Yun Wang, Zhenhua Yang, Zhijiang, Zhu Zhu, acesine, acqua.csq, austin ce, bigdata-ny, billyrrr, caozhen, caozhen1937, chaojianok, chenkai, chris, cpugputpu, dalong01.liu, darionyaphet, dijie, diohabara, dufeng1010, fangliang, felixzheng, gkrishna, gm7y8, godfrey he, godfreyhe, gsralex, haseeb1431, hequn.chq, hequn8128, houmaozheng, huangxiao, huangxingbo, huzekang, jPrest, jasonlee, jinfeng, jinhai, johnm, jxeditor, kecheng, kevin.cyj, kevinzwx, klion26, leiqiang, libenchao, lijiewang.wlj, liufangliang, liujiangang, liuyongvs, liuyufei9527, lsy, lzy3261944, mans2singh, molsionmo, openopen2, pengweibo, rinkako, <a href="mailto:sanshi@wwdz.onaliyun.com">sanshi@wwdz.onaliyun.com</a>, secondChoice, seunjjs, shaokan.cao, shizhengchao, shizk233, shouweikun, spurthi chaganti, sujun, sunjincheng121, sxnan, tison, totorooo, venn, vthinkxie, wangsong2, wangtong, wangxiyuan, wangxlong, wangyang0918, wangzzu, weizheng92, whlwanghailong, wineandcheeze, wooplevip, wtog, wudi28, wxp, xcomp, xiaoHoly, xiaolong.wang, yangyichao-mango, yingshin, yushengnan, yushujun, yuzhao.cyz, zhangap, zhangmang, zhangzhanchum, zhangzhanchun, zhangzhanhua, zhangzp, zheyu, zhijiang, zhushang, zhuxiaoshang, zlzhang0122, zodo, zoudan, zouzhiye</p>
 </p>
 </article>
- Page Content
+ 
       
-
-      <footer class="book-footer">
-        
-      </footer>
 
       
   
@@ -818,46 +854,6 @@ With the new release, Flink SQL supports <strong>metadata columns</strong> to re
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
-
-    
-    <aside class="book-toc">
-      
-
-
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#new-features-and-improvements">New Features and Improvements</a>
-          <ul>
-            <li><a href="#batch-execution-mode-in-the-datastream-api">Batch Execution Mode in the DataStream API</a></li>
-            <li><a href="#new-data-sink-api-beta">New Data Sink API (Beta)</a></li>
-            <li><a href="#kubernetes-high-availability-ha-service">Kubernetes High Availability (HA) Service</a></li>
-            <li><a href="#other-improvements">Other Improvements</a></li>
-            <li><a href="#table-apisql-metadata-handling-in-sql-connectors">Table API/SQL: Metadata Handling in SQL Connectors</a></li>
-            <li><a href="#table-apisql-upsert-kafka-connector">Table API/SQL: Upsert Kafka Connector</a></li>
-            <li><a href="#table-apisql-support-for-temporal-table-joins-in-sql">Table API/SQL: Support for Temporal Table Joins in SQL</a></li>
-            <li><a href="#other-improvements-to-the-table-apisql">Other Improvements to the Table API/SQL</a></li>
-            <li><a href="#pyflink-python-datastream-api">PyFlink: Python DataStream API</a></li>
-            <li><a href="#other-improvements-to-pyflink">Other Improvements to PyFlink</a></li>
-          </ul>
-        </li>
-        <li><a href="#important-changes">Important Changes</a></li>
-        <li><a href="#release-notes">Release Notes</a></li>
-        <li><a href="#list-of-contributors">List of Contributors</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
- 
-    </aside>
-    <aside class="expand-toc">
-      <button class="toc" onclick="expandToc()">
-        <i class="fa fa-expand" aria-hidden="true"></i>
-      </button>
-    </aside>
-    
   </main> 
 
   

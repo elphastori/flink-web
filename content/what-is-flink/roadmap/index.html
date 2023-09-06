@@ -21,7 +21,7 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="alternate" hreflang="zh" href="https://flink.apache.org/zh/what-is-flink/roadmap/" title="开发计划">
 
-<link rel="stylesheet" href="/book.min.1684828e5993e3654b337fdd65c8992f2ebf74bd3d2aa60c4e02433057fbd5bb.css" integrity="sha256-FoSCjlmT42VLM3/dZciZLy6/dL09KqYMTgJDMFf71bs=">
+<link rel="stylesheet" href="/book.min.5f4db6aab7806e612cf2cda76108d5d27ec21cf81dbf884becdeb85457062ac6.css" integrity="sha256-X022qreAbmEs8s2nYQjV0n7CHPgdv4hL7N64VFcGKsY=">
 <script defer src="/en.search.min.1e52ae623c5dfc48c431d62cf754c9626056cfdc2c293bb1a8d7e5b9d0960475.js" integrity="sha256-HlKuYjxd/EjEMdYs91TJYmBWz9wsKTuxqNfludCWBHU="></script>
 <!--
 Made with Book Theme
@@ -420,8 +420,59 @@ https://github.com/alex-shpak/hugo-book
 </nav> 
 
   
-  <main class="container flex"> 
-    <div class="book-page">
+  <main class="flex">
+    
+      <aside class="book-toc">
+        
+  
+
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
+  <ul>
+    <li><a href="#roadmap">Roadmap</a>
+      <ul>
+        <li><a href="#feature-radar">Feature Radar</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#scenarios-we-focus-on">Scenarios We Focus On</a>
+          <ul>
+            <li><a href="#batch--streaming-unification-and-mixing">Batch / Streaming Unification and Mixing</a></li>
+            <li><a href="#unified-sql-platform">Unified SQL Platform</a></li>
+            <li><a href="#towards-streaming-warehouses">Towards Streaming Warehouses</a></li>
+          </ul>
+        </li>
+        <li><a href="#engine-evolution">Engine Evolution</a>
+          <ul>
+            <li><a href="#disaggregated-state-management">Disaggregated State Management</a></li>
+            <li><a href="#evolution-of-flink-apis">Evolution of Flink APIs</a></li>
+            <li><a href="#flink-as-an-application">Flink as an Application</a></li>
+            <li><a href="#performance">Performance</a></li>
+            <li><a href="#stability">Stability</a></li>
+            <li><a href="#usability">Usability</a></li>
+          </ul>
+        </li>
+        <li><a href="#developer-experience">Developer Experience</a>
+          <ul>
+            <li><a href="#ecosystem">Ecosystem</a></li>
+            <li><a href="#documentation">Documentation</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+      </aside>
+      <aside class="expand-toc hidden">
+        <a class="toc" onclick="expandToc()" href="javascript:void(0)">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+      </aside>
+    
+
+    <div class="container book-page">
       <header class="book-header">
         
   
@@ -449,7 +500,7 @@ https://github.com/alex-shpak/hugo-book
     
   
 
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
   <ul>
     <li><a href="#roadmap">Roadmap</a>
       <ul>
@@ -492,7 +543,7 @@ https://github.com/alex-shpak/hugo-book
  
       </header>
 
-    
+
       
 
 
@@ -715,12 +766,8 @@ There is ongoing work on introducing more new connectors (e.g. <a href="https://
 <li>SQL Docs: <a href="https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=127405685">FLIP-60</a></li>
 </ul>
 </article>
- Page Content
+ 
       
-
-      <footer class="book-footer">
-        
-      </footer>
 
       
   
@@ -732,57 +779,6 @@ There is ongoing work on introducing more new connectors (e.g. <a href="https://
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
-
-    
-    <aside class="book-toc">
-      
-  
-
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
-  <ul>
-    <li><a href="#roadmap">Roadmap</a>
-      <ul>
-        <li><a href="#feature-radar">Feature Radar</a>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-        <li><a href="#scenarios-we-focus-on">Scenarios We Focus On</a>
-          <ul>
-            <li><a href="#batch--streaming-unification-and-mixing">Batch / Streaming Unification and Mixing</a></li>
-            <li><a href="#unified-sql-platform">Unified SQL Platform</a></li>
-            <li><a href="#towards-streaming-warehouses">Towards Streaming Warehouses</a></li>
-          </ul>
-        </li>
-        <li><a href="#engine-evolution">Engine Evolution</a>
-          <ul>
-            <li><a href="#disaggregated-state-management">Disaggregated State Management</a></li>
-            <li><a href="#evolution-of-flink-apis">Evolution of Flink APIs</a></li>
-            <li><a href="#flink-as-an-application">Flink as an Application</a></li>
-            <li><a href="#performance">Performance</a></li>
-            <li><a href="#stability">Stability</a></li>
-            <li><a href="#usability">Usability</a></li>
-          </ul>
-        </li>
-        <li><a href="#developer-experience">Developer Experience</a>
-          <ul>
-            <li><a href="#ecosystem">Ecosystem</a></li>
-            <li><a href="#documentation">Documentation</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
- 
-    </aside>
-    <aside class="expand-toc">
-      <button class="toc" onclick="expandToc()">
-        <i class="fa fa-expand" aria-hidden="true"></i>
-      </button>
-    </aside>
-    
   </main> 
 
   

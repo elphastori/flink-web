@@ -21,7 +21,7 @@ Flink graduation # The biggest news is that the Apache board approved Flink as a
 <title>December 2014 in the Flink community | Apache Flink</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.1684828e5993e3654b337fdd65c8992f2ebf74bd3d2aa60c4e02433057fbd5bb.css" integrity="sha256-FoSCjlmT42VLM3/dZciZLy6/dL09KqYMTgJDMFf71bs=">
+<link rel="stylesheet" href="/book.min.5f4db6aab7806e612cf2cda76108d5d27ec21cf81dbf884becdeb85457062ac6.css" integrity="sha256-X022qreAbmEs8s2nYQjV0n7CHPgdv4hL7N64VFcGKsY=">
 <script defer src="/en.search.min.1e52ae623c5dfc48c431d62cf754c9626056cfdc2c293bb1a8d7e5b9d0960475.js" integrity="sha256-HlKuYjxd/EjEMdYs91TJYmBWz9wsKTuxqNfludCWBHU="></script>
 <!--
 Made with Book Theme
@@ -420,8 +420,51 @@ https://github.com/alex-shpak/hugo-book
 </nav> 
 
   
-  <main class="container flex"> 
-    <div class="book-page">
+  <main class="flex">
+    
+      <aside class="book-toc">
+        
+
+
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#flink-graduation">Flink graduation</a></li>
+            <li><a href="#new-flink-website">New Flink website</a></li>
+            <li><a href="#flink-irc-channel">Flink IRC channel</a></li>
+            <li><a href="#meetups-and-talks">Meetups and Talks</a></li>
+          </ul>
+        </li>
+        <li><a href="#notable-code-contributions">Notable code contributions</a>
+          <ul>
+            <li><a href="#streaming-scala-apihttpsgithubcomapacheincubator-flinkpull275"><a href="https://github.com/apache/incubator-flink/pull/275">Streaming Scala API</a></a></li>
+            <li><a href="#intermediate-datasetshttpsgithubcomapacheincubator-flinkpull254"><a href="https://github.com/apache/incubator-flink/pull/254">Intermediate datasets</a></a></li>
+            <li><a href="#configurable-execution-modehttpsgithubcomapacheincubator-flinkpull259"><a href="https://github.com/apache/incubator-flink/pull/259">Configurable execution mode</a></a></li>
+            <li><a href="#distributed-coordination-via-akkahttpsgithubcomapacheincubator-flinkpull149"><a href="https://github.com/apache/incubator-flink/pull/149">Distributed Coordination via Akka</a></a></li>
+            <li><a href="#sorting-of-very-large-recordshttpsgithubcomapacheincubator-flinkpull249-"><a href="https://github.com/apache/incubator-flink/pull/249">Sorting of very large records</a></a></li>
+            <li><a href="#kryo-serialization-as-the-new-default-fallbackhttpsgithubcomapacheincubator-flinkpull271"><a href="https://github.com/apache/incubator-flink/pull/271">Kryo Serialization as the new default fallback</a></a></li>
+            <li><a href="#hadoop-filesystem-supporthttpsgithubcomapacheincubator-flinkpull268"><a href="https://github.com/apache/incubator-flink/pull/268">Hadoop FileSystem support</a></a></li>
+          </ul>
+        </li>
+        <li><a href="#heading-to-the-080-release">Heading to the 0.8.0 release</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+      </aside>
+      <aside class="expand-toc hidden">
+        <a class="toc" onclick="expandToc()" href="javascript:void(0)">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+      </aside>
+    
+
+    <div class="container book-page">
       <header class="book-header">
         
   
@@ -449,7 +492,7 @@ https://github.com/alex-shpak/hugo-book
     
 
 
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
+<nav id="TableOfContents"><h3>On This Page <a href="javascript:void(0)" class="toc" onclick="collapseToc()"><i class="fa fa-times" aria-hidden="true"></i></a></h3>
   <ul>
     <li>
       <ul>
@@ -484,7 +527,7 @@ https://github.com/alex-shpak/hugo-book
  
       </header>
 
-    
+
       
 
 
@@ -571,12 +614,8 @@ Flink serialization system improved a lot over time and by now surpasses the cap
 <p>The community is working hard together with the Apache infra team to migrate the Flink infrastructure to a top-level project. At the same time, the Flink community is working on the Flink 0.8.0 release which should be out very soon.</p>
 </p>
 </article>
- Page Content
+ 
       
-
-      <footer class="book-footer">
-        
-      </footer>
 
       
   
@@ -588,49 +627,6 @@ Flink serialization system improved a lot over time and by now surpasses the cap
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
-
-    
-    <aside class="book-toc">
-      
-
-
-<nav id="TableOfContents"><h3>On This Page <button class="toc" onclick="collapseToc()"><i class="fa fa-compress" aria-hidden="true"></i></button></h3>
-  <ul>
-    <li>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#flink-graduation">Flink graduation</a></li>
-            <li><a href="#new-flink-website">New Flink website</a></li>
-            <li><a href="#flink-irc-channel">Flink IRC channel</a></li>
-            <li><a href="#meetups-and-talks">Meetups and Talks</a></li>
-          </ul>
-        </li>
-        <li><a href="#notable-code-contributions">Notable code contributions</a>
-          <ul>
-            <li><a href="#streaming-scala-apihttpsgithubcomapacheincubator-flinkpull275"><a href="https://github.com/apache/incubator-flink/pull/275">Streaming Scala API</a></a></li>
-            <li><a href="#intermediate-datasetshttpsgithubcomapacheincubator-flinkpull254"><a href="https://github.com/apache/incubator-flink/pull/254">Intermediate datasets</a></a></li>
-            <li><a href="#configurable-execution-modehttpsgithubcomapacheincubator-flinkpull259"><a href="https://github.com/apache/incubator-flink/pull/259">Configurable execution mode</a></a></li>
-            <li><a href="#distributed-coordination-via-akkahttpsgithubcomapacheincubator-flinkpull149"><a href="https://github.com/apache/incubator-flink/pull/149">Distributed Coordination via Akka</a></a></li>
-            <li><a href="#sorting-of-very-large-recordshttpsgithubcomapacheincubator-flinkpull249-"><a href="https://github.com/apache/incubator-flink/pull/249">Sorting of very large records</a></a></li>
-            <li><a href="#kryo-serialization-as-the-new-default-fallbackhttpsgithubcomapacheincubator-flinkpull271"><a href="https://github.com/apache/incubator-flink/pull/271">Kryo Serialization as the new default fallback</a></a></li>
-            <li><a href="#hadoop-filesystem-supporthttpsgithubcomapacheincubator-flinkpull268"><a href="https://github.com/apache/incubator-flink/pull/268">Hadoop FileSystem support</a></a></li>
-          </ul>
-        </li>
-        <li><a href="#heading-to-the-080-release">Heading to the 0.8.0 release</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
- 
-    </aside>
-    <aside class="expand-toc">
-      <button class="toc" onclick="expandToc()">
-        <i class="fa fa-expand" aria-hidden="true"></i>
-      </button>
-    </aside>
-    
   </main> 
 
   
