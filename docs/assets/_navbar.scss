@@ -45,6 +45,7 @@
 
         a.nav-link {
             transition: none;
+            white-space: nowrap;
         }
 
         .book-search {
@@ -55,7 +56,9 @@
             justify-content: flex-end;
 
             .search-bar {
-                width: 250px;
+                width: 100%;
+                min-width: 150px;
+                max-width: 250px;
                 border-bottom: white solid 1px;
 
                 input, input:focus, input:active {
@@ -128,6 +131,7 @@
                 list-style: none;
                 padding: 0;
                 display: block;
+                min-width: 100%;
                 overflow: hidden;
                 top: 43px;
                 border-top: 10px solid var(--accent-color);

@@ -34,17 +34,21 @@ under the License.
 {{ end }}
 
 {{ define "nav-menu-item" }}
-  {{ if $.Item.IsSection }}
+  {{ if eq $.Item.Params.section_link true }}
+    <li class="nav-item">
+      {{ template "book-page-link" (dict "Page" $.Item "CurrentPage" $.CurrentPage "Classes" "nav-link") }}
+    </li>
+  {{ else if $.Item.IsSection }}
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         {{- partial "docs/title" $.Item -}}
       </a>
       <ul class="dropdown-menu">
-        <li class="{{ .ListItemClasses }}">
-          {{ range (where $.Item.Pages "Params.bookhidden" "ne" true) }}
+        {{ range (where $.Item.Pages "Params.bookhidden" "ne" true) }}
+          <li>
             {{ template "book-page-link" (dict "Page" . "CurrentPage" $.CurrentPage "Classes" "dropdown-item") }}
-          {{ end }}
-        </li>
+          </li>
+        {{ end }}
       </ul>
     </li>
   {{ else }}
