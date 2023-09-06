@@ -64,4 +64,20 @@ hr {
         background-color: var(--code-inline-block-background-color);
         color: var(--code-inline-block-text-color);
     }
+
+    p {
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+
+    table.table thead tr {
+        background: var(--table-header-background-color);
+        color: var(--body-font-color);
+        font-weight: 700;
+    }
+
+    table.table tbody tr {
+        background: inherit;
+        color: var(--body-font-color);
+    }
 }
