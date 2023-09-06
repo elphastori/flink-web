@@ -37,11 +37,6 @@ under the License.
           <li>
             <a href="https://www.apache.org/licenses/">License</a>
           </li>
-          {{ if .IsPage }}
-            <li>
-              <a href="https://cwiki.apache.org/confluence/display/FLINK/Flink+Translation+Specifications">Contribute translation</a>
-            </li>
-          {{ end }}
        </ul>
       </div>
       <div class="panel">
@@ -58,17 +53,6 @@ under the License.
           <li>
             <a href="/zh/">中文版</a>
           </li>
-          {{ if .IsPage }}
-            {{ $folder := "content" }}
-            {{ if eq "/zh" .Site.LanguagePrefix }}
-            	{{ $folder = "content.zh" }}
-            {{ end }}
-            <li>
-              <a href="{{ .Site.Params.Repo }}/edit/asf-site/docs/{{ $folder }}/{{ .File.Path }}">
-                <i class="fa fa-edit fa-fw"></i> Edit This Page
-              </a>
-            </li>
-          {{ end }}
        </ul>
       </div>
       <div class="panel icons">
