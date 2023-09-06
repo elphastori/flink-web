@@ -21,6 +21,7 @@
 @import "footer";
 @import "panels";
 @import "footer";
+@import "toc";
 
 
 a {
@@ -40,14 +41,7 @@ a {
     }
 
     i {
-        color: #C679D4;
         margin-left: 5px;
-    }
-}
-
-.book-toc {
-    nav { 
-        top: 72px;
     }
 }
 
@@ -65,4 +59,3 @@ hr {
     
     text-overflow: ellipsis;
 }
-

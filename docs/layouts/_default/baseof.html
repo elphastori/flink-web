@@ -52,36 +52,32 @@ under the License.
   {{ partial "docs/navbar" . }} 
 
   {{ if .IsPage }}
-  <main class="container flex"> 
-    <div class="book-page">
+  <main class="flex">
+    {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+      <aside class="book-toc">
+        {{ template "toc" . }} <!-- Table of Contents -->
+      </aside>
+      <aside class="expand-toc hidden">
+        <a class="toc" onclick="expandToc()" href="javascript:void(0)">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+      </aside>
+    {{ end }}
+
+    <div class="container book-page">
       <header class="book-header">
         {{ template "header" . }} <!-- Mobile layout header -->
       </header>
 
-    
-      {{ partial "docs/inject/content-before" . }}
-      {{ template "main" . }} Page Content
-      {{ partial "docs/inject/content-after" . }}
 
-      <footer class="book-footer">
-        
-      </footer>
+      {{ partial "docs/inject/content-before" . }}
+      {{ template "main" . }} <!-- Page Content -->
+      {{ partial "docs/inject/content-after" . }}
 
       {{ template "comments" . }} <!-- Comments block -->
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
-
-    {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
-    <aside class="book-toc">
-      {{ template "toc" . }} <!-- Table of Contents -->
-    </aside>
-    <aside class="expand-toc">
-      <button class="toc" onclick="expandToc()">
-        <i class="fa fa-expand" aria-hidden="true"></i>
-      </button>
-    </aside>
-    {{ end }}
   </main> 
 
   {{ partial "docs/inject/body" . }}
