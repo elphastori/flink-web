@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://flink.apache.org/posts/</loc>
+    <lastmod>2023-08-15T08:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://flink.apache.org/what-is-flink/flink-architecture/</loc>
     <xhtml:link
                 rel="alternate"
@@ -289,9 +292,6 @@
                 hreflang="en"
                 href="https://flink.apache.org/documentation/flink-table-store-master/"
                 />
-  </url><url>
-    <loc>https://flink.apache.org/posts/</loc>
-    <lastmod>2023-08-15T08:00:00+00:00</lastmod>
   </url><url>
     <loc>https://flink.apache.org/documentation/</loc>
     <xhtml:link
