@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>What is Apache Flink? on Apache Flink</title>
+    <title>About on Apache Flink</title>
     <link>https://flink.apache.org/what-is-flink/</link>
-    <description>Recent content in What is Apache Flink? on Apache Flink</description>
+    <description>Recent content in About on Apache Flink</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://flink.apache.org/what-is-flink/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -36,6 +36,24 @@ Building Blocks for Streaming Applications # The types of applications that can 
       <guid>https://flink.apache.org/what-is-flink/flink-operations/</guid>
       <description>What is Apache Flink? — Operations # Apache Flink is a framework for stateful computations over unbounded and bounded data streams. Since many streaming applications are designed to run continuously with minimal downtime, a stream processor must provide excellent failure recovery, as well as tooling to monitor and maintain applications while they are running.
 Apache Flink puts a strong focus on the operational aspects of stream processing. Here, we explain Flink&amp;rsquo;s failure recovery mechanism and present its features to manage and supervise running applications.</description>
+    </item>
+    
+    <item>
+      <title>Use Cases</title>
+      <link>https://flink.apache.org/what-is-flink/use-cases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://flink.apache.org/what-is-flink/use-cases/</guid>
+      <description>Use Cases # Apache Flink is an excellent choice to develop and run many different types of applications due to its extensive feature set. Flink&amp;rsquo;s features include support for stream and batch processing, sophisticated state management, event-time processing semantics, and exactly-once consistency guarantees for state. Moreover, Flink can be deployed on various resource providers such as YARN and Kubernetes, but also as a stand-alone cluster on bare-metal hardware. Configured for high availability, Flink does not have a single point of failure.</description>
+    </item>
+    
+    <item>
+      <title>Roadmap</title>
+      <link>https://flink.apache.org/what-is-flink/roadmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://flink.apache.org/what-is-flink/roadmap/</guid>
+      <description>Roadmap # Preamble: This roadmap means to provide users and contributors with a high-level summary of ongoing efforts, grouped by the major threads to which the efforts belong. With so much that is happening in Flink, we hope that this helps with understanding the direction of the project. The roadmap contains both efforts in early stages as well as nearly completed efforts, so that users may get a better impression of the overall status and direction of those developments.</description>
     </item>
     
   </channel>
