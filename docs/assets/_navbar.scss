@@ -135,6 +135,7 @@
                 overflow: hidden;
                 top: 43px;
                 border-top: 10px solid var(--accent-color);
+                z-index: 10;
 
                 &:empty {
                     display: none;
