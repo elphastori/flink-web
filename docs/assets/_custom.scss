@@ -60,14 +60,8 @@ hr {
 }
 
 .markdown {
-//    pre {
-//        padding: 20px;
-//        background-color: var(--code-block-background-color);
-//        color: var(--code-block-text-color);
-//    }
-
-//    code {
-//        background-color: var(--code-inline-block-background-color);
-//        color: var(--code-inline-block-text-color);
-//    }
+    code {
+        background-color: var(--code-inline-block-background-color);
+        color: var(--code-inline-block-text-color);
+    }
 }
