@@ -20,6 +20,9 @@ under the License.
 <html lang="{{ .Site.Language.Lang }}" dir={{ .Site.Language.LanguageDirection }}>
 
 <head>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
   {{ hugo.Generator }}
   {{ partial "docs/html-head" . }}
   {{ partial "docs/inject/head" . }}
@@ -45,25 +48,23 @@ under the License.
 </head>
 
 <body dir={{ .Site.Language.LanguageDirection }}>
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
-    <aside class="book-menu">
-      {{ template "menu" . }} <!-- Left menu Content -->
-    </aside>
 
+  {{ partial "docs/navbar" . }} 
+
+  {{ if .IsPage }}
+  <main class="container flex"> 
     <div class="book-page">
       <header class="book-header">
         {{ template "header" . }} <!-- Mobile layout header -->
       </header>
 
+    
       {{ partial "docs/inject/content-before" . }}
-      {{ template "main" . }} <!-- Page Content -->
+      {{ template "main" . }} Page Content
       {{ partial "docs/inject/content-after" . }}
 
       <footer class="book-footer">
-        {{ template "footer" . }} <!-- Footer under page content -->
-        {{ partial "docs/inject/footer" . }}
+        
       </footer>
 
       {{ template "comments" . }} <!-- Comments block -->
@@ -81,9 +82,61 @@ under the License.
       </button>
     </aside>
     {{ end }}
-  </main>
+  </main> 
 
   {{ partial "docs/inject/body" . }}
+  {{ else }}
+  <header>
+    {{ template "header" . }}
+  </header>
+
+  <main>
+    {{ template "main" . }} <!-- Page Content -->
+  </main>
+  {{ end }}
+
+  <footer>
+    {{ template "footer" . }} <!-- Footer under page content -->
+    {{ partial "docs/inject/footer" . }}
+  </footer>
+
+  <!-- <main class="container flex"> -->
+    <!-- <aside class="book-menu"> -->
+      <!-- {{ template "menu" . }} Left menu Content -->
+    <!-- </aside> -->
+
+    <!-- <div class="book-page"> -->
+      <!-- <header class="book-header"> -->
+        <!-- {{ template "header" . }} Mobile layout header -->
+      <!-- </header> -->
+
+    
+      <!-- {{ partial "docs/inject/content-before" . }} -->
+      <!-- {{ template "main" . }} Page Content -->
+      <!-- {{ partial "docs/inject/content-after" . }} -->
+
+      <!-- <footer class="book-footer"> -->
+        
+      <!-- </footer> -->
+
+      <!-- {{ template "comments" . }} Comments block -->
+
+      <!-- <label for="menu-control" class="hidden book-menu-overlay"></label> -->
+    <!-- </div> -->
+
+    <!-- {{ if default true (default .Site.Params.BookToC .Params.BookToC) }} -->
+    <!-- <aside class="book-toc"> -->
+      <!-- {{ template "toc" . }} Table of Contents -->
+    <!-- </aside> -->
+    <!-- <aside class="expand-toc"> -->
+      <!-- <button class="toc" onclick="expandToc()"> -->
+        <!-- <i class="fa fa-expand" aria-hidden="true"></i> -->
+      <!-- </button> -->
+    <!-- </aside> -->
+    <!-- {{ end }} -->
+  <!-- </main> -->
+
+  <!-- {{ partial "docs/inject/body" . }} -->
 </body>
 
 </html>

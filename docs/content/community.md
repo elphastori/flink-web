@@ -1,8 +1,6 @@
 ---
 title: Community & Project Info
 bookCollapseSection: false
-weight: 14
-menu_weight: 3
 
 tables:
     mailing-lists:

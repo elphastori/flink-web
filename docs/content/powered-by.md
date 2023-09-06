@@ -2,8 +2,6 @@
 title: Powered By
 bookToc: false
 bookCollapseSection: false
-weight: 7
-menu_weight: 1
 
 tables:
     powered-by:

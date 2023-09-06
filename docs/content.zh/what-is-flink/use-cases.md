@@ -1,8 +1,7 @@
 ---
 title: 应用场景
 bookCollapseSection: false
-weight: 6
-menu_weight: 1
+weight: 4
 ---
 <!--
 Licensed to the Apache Software Foundation (ASF) under one

@@ -1,0 +1,91 @@
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    height: 560px;
+
+    .logo {
+        height: 500px;
+        display: flex;
+        justify-content: center;
+
+        img {
+            margin: auto;
+            display: block;
+        }
+    }
+
+    .title {
+        max-width: 700px;
+        font-style: normal;
+        line-height: normal;
+
+        h1 {
+            font-size: 80px;
+            font-weight: 700;
+            letter-spacing: -1.1px;
+        }
+
+        h2 {
+            font-size: 35px;
+            font-weight: 700;
+            letter-spacing: -1.1px;
+            border: none;
+        }
+
+        p {
+            font-size: 25px;
+            font-weight: 400;
+        }
+    }
+
+    @media (max-width: 1600px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        gap: 75px;
+
+        .logo {
+            img {
+                width: 80%;
+            }
+        }
+    }
+
+    @media (max-width: 1360px) {
+        padding-top: 0;
+
+        .logo {
+            display: none;
+        }
+
+        .title {
+            text-align: center;
+        }
+    }
+}
+
+.waves {
+    position: absolute;
+    z-index: -1;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    height: 560px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 560px;
+
+        @media (max-width: 1360px) {
+            content: url("/img/flink-sine-wave-narrow.svg");
+        }
+    }
+}

@@ -2,8 +2,6 @@
 title: Flink 用户
 bookToc: false
 bookCollapseSection: false
-weight: 7
-menu_weight: 1
 
 tables:
     powered-by:

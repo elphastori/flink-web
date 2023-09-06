@@ -19,6 +19,9 @@ under the License.
 <!--
     Partial that on the footer of every page.
 -->
+
+<div class="separator"/>
+
 {{ if .IsPage }}
 {{ $folder := "content" }}
 {{ if eq "/zh" .Site.LanguagePrefix }}
@@ -28,4 +31,69 @@ under the License.
 <a href="https://cwiki.apache.org/confluence/display/FLINK/Flink+Translation+Specifications">Want to contribute translation?</a>
 <br><br>
 <a href="{{ .Site.Params.Repo }}/edit/asf-site/docs/{{ $folder }}/{{ .File.Path }}" style="color:black"><i class="fa fa-edit fa-fw"></i>Edit This Page</a>
+{{ else }}
+<div class="panels">
+  <div class="wrapper">
+      <div class="panel">
+        <ul>
+          <li>
+            <a href="/powered-by">Powered by</a>
+          </li>
+          <li>
+            <a href="https://flink-packages.org/">flink-package.org</a>
+          </li>
+          <li>
+            <a href="https://www.apache.org/">Apache Software Foundation</a>
+          </li>
+          <li>
+            <a href="https://www.apache.org/licenses/">License</a>
+          </li>
+       </ul>
+      </div>
+      <div class="panel">
+        <ul>
+          <li>
+            <a href="https://www.apache.org/security/">Security</a>
+          </li>
+          <li>
+            <a href="https://www.apache.org/foundation/sponsorship.html">Donate</a>
+          </li>
+          <li>
+            <a href="https://www.apache.org/foundation/thanks.html">Thanks</a>
+          </li>
+          <li>
+            <a href="/zh/">中文版</a>
+          </li>
+       </ul>
+      </div>
+      <div class="panel icons">
+        <div>
+          <a href="/posts">
+            <img src="/img/flink-blog-icon.svg"/>
+            <span>Flink blog</span>
+          </a>
+        </div>
+        <div>
+          <a href="https://github.com/apache/flink">
+            <img src="/img/flink-github-icon.svg"/>
+            <span>Github</span>
+          </a>
+        </div>
+        <div>
+          <a href="https://twitter.com/apacheflink">
+            <img src="/img/flink-twitter-icon.svg"/>
+            <span>Twitter</span>
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+
+<hr/>
+
+<div class="container disclaimer">
+  <p>The contents of this website are © 2023 Apache Software Foundation under the terms of the Apache License v2. Apache Flink, Flink, and the Flink logo are either registered trademarks or trademarks of The Apache Software Foundation in the United States and other countries.</p>
+</div>
 {{ end }}
+
+

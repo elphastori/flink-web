@@ -1,0 +1,214 @@
+
+.navbar {
+    font-style: normal;
+    background-color: var(--navbar-background-colour);
+
+    a:hover, a:visited, a:hover:visited, a i {
+        text-decoration: none;
+        color: var(--navbar-dropdown-hover-text-color);
+    }
+
+    a.dropdown-item, #book-search-results li {
+        &:hover, &:visited {
+            background-color: var(--navbar-dropdown-hover-background-color);
+        }
+    }
+
+    div.container-fluid {
+        padding: 0;
+    }
+    .collapsing {
+        -webkit-transition: none;
+        transition: none;
+        display: none;
+    }
+
+    .navbar-brand {
+        display: flex;
+        margin: auto auto auto 20px;
+        align-items: center;
+        height: 72px;
+
+        span {
+            margin-left: 20px;
+            margin-right: 40px;
+        }
+    }
+
+    .navbar-collapse {
+        height: 100%;
+        width: 100%;
+
+        &.collapse .nav-item {
+            padding: 0;
+        }
+
+        a.nav-link {
+            transition: none;
+        }
+
+        .book-search {
+            margin: 10px 25px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            .search-bar {
+                width: 250px;
+                border-bottom: white solid 1px;
+
+                input, input:focus, input:active {
+                    color: white;
+                    background-color: black;
+                    outline: none;
+                    border: none;
+                    border-radius: 0px;
+                    box-shadow: none;
+                }
+
+                i {
+                    content: "\f002";
+                    font-size: 18px;
+                    margin: auto;
+                    display: inline-block;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+
+                    &.search {
+                        display: inherit;
+                    }
+
+                    &.spinner {
+                        display: none;
+                    }
+                }
+            }
+
+            &:has(input[required]) {
+                .search-bar {
+                    .search {
+                        display: none;
+                    }
+                    .spinner {
+                        display: inherit;
+                    }
+                }
+            }
+
+            .book-search-spinner {
+                padding-left: 10px;
+                animation: none;
+                position: inherit;
+                margin: auto;
+                padding-bottom: 1px;
+                height: inherit;
+                width: 18px;
+                border: none;
+            }
+
+            @media (max-width: 1200px) {
+                justify-content: center;
+                padding: 25px 40px;
+                margin: 0;
+            
+                .search-bar {
+                    width: 100%;
+                }
+
+                #book-search-results {
+                    left: 0;
+                    right: 0;
+                }
+            }
+
+            #book-search-results {
+                position: absolute;
+                background-color: var(--navbar-dropdown-background-color);
+                list-style: none;
+                padding: 0;
+                display: block;
+                overflow: hidden;
+                top: 43px;
+                border-top: 10px solid var(--accent-color);
+
+                &:empty {
+                    display: none;
+                }
+
+                li {
+                    padding: 10px 25px;
+
+                    a {
+                        display: block;
+                    }
+                }
+
+                @media (max-width: 1200px) {
+                    top: 84px;
+                }
+            }
+        }
+
+        ul.navbar-nav {
+            height: 100%;
+
+            > li.nav-item {
+                text-align: left; 
+                vertical-align: middle;
+                padding: 15px;
+                border-top: solid 10px var(--navbar-background-colour);
+                border-bottom: solid 10px var(--navbar-background-colour);
+
+                &:has(a.show) {
+                    border-bottom: 10px solid var(--accent-color);
+                    background-color: var(--navbar-dropdown-background-color);
+                }
+
+                .dropdown-menu {
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+                
+                    max-height: 0;
+                    display: block;
+                    overflow: hidden;
+                    opacity: 0;
+        
+                    a {
+                        padding-left: 25px;
+                        padding-right: 25px;
+                    }
+
+                    &.show { 
+                        max-height: inherit;
+                        opacity: 1;
+                    }
+                }
+
+                @media (max-width: 1200px) {
+                    .dropdown-menu {
+                        a {
+                            padding-left: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+        margin-right: 20px;
+        
+        &:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {  
+            width: inherit;
+            height: inherit;
+        }
+    }
+}

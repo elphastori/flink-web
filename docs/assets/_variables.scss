@@ -1,0 +1,81 @@
+
+//link :hover - #0A4A74 (+ underlining the link)
+//link :visited - #7749BF
+//Link :visited:hover - #6B40B2 (+ underlining the link)
+
+@mixin theme-light {
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-500: #adb5bd;
+
+  --link-color: white;
+  --link-hover-color: #99CBE4;
+  --visited-link-color: #A783E1;
+  --visited-link-hover-color: #B99CE7;
+
+  --body-background: #232F3E;
+  --body-background-alt: #17202C;
+  --body-font-color: white;
+
+  --button-text-color: #232f3e;
+  --button-background-color: #C679D4;
+  --button-hover-text-color: #232f3e;
+  --button-hover-background-color: #B26DBF;
+  --button-pressed-text-color: #232f3e;
+  --button-pressed-background-color: #9E61AA;
+
+  --tab-text-color: white;
+  --tab-background-color: rgba(198, 121, 212, 0.25);
+  --tab-hover-text-color: var(--body-background);
+  --tab-hover-background-color: rgba(198, 121, 212, 0.75);
+  --tab-active-text-color: var(--body-background);
+  --tab-active-background-color: #C679D4;
+
+  --button-accent: #17202C;
+
+  --icon-filter: none;
+
+  --hint-color-info: #6bf;
+  --hint-color-warning: #fd6;
+  --hint-color-danger: #f66;
+
+  --accent-color: #7A3587;
+
+  --navbar-background-colour: black;
+  --navbar-text-color: white;
+  --navbar-accent-color: var(--accent-color);
+  --navbar-dropdown-background-color: #2a2e33;
+  --navbar-dropdown-hover-background-color: var(--navbar-accent-color);
+  --navbar-dropdown-hover-text-color: var(--navbar-text-color);
+
+  .navbar {
+    --bs-navbar-color: var(--navbar-text-color);
+    --bs-navbar-hover-color: var(--navbar-text-color);
+    --bs-navbar-padding-y: 0;
+    --bs-navbar-active-color: var(--navbar-text-color);
+  }
+
+  ul.navbar-nav {
+    --bs-nav-link-font-size: 14px;
+    --bs-nav-link-font-weight: 400;
+    --bs-nav-link-padding-x: 25px;
+    --bs-nav-link-padding-y: 0;
+
+    .nav-link {
+      --bs-navbar-nav-link-padding-x: 0;
+      --bs-navbar-nav-link-padding-y: 0;
+    }
+  }
+
+  .dropdown-menu {
+    --bs-dropdown-spacer: 10px;
+    --bs-dropdown-border-radius: 0;
+    --bs-dropdown-border-width: 0;
+    --bs-dropdown-bg: var(--navbar-dropdown-background-color);
+    --bs-dropdown-padding-x: 0;
+    --bs-dropdown-padding-y: 0;
+    --bs-dropdown-item-padding-y: 20px;
+    --bs-dropdown-link-color: var(--navbar-text-color);
+    --bs-dropdown-font-size: 14px;
+  }
+}

@@ -1,0 +1,41 @@
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    .disclaimer {
+        margin-top: 36px;
+        margin-bottom: 40px;
+        font-weight: 400;
+        max-width: 1200px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+
+            img {
+                display: block;
+            }
+        }
+    }
+}

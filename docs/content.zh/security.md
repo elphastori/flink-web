@@ -1,8 +1,6 @@
 ---
 title: Security
 bookCollapseSection: false
-weight: 17
-menu_weight: 3
 ---
 <!--
 Licensed to the Apache Software Foundation (ASF) under one

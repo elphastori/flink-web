@@ -22,102 +22,130 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-# Apache Flink<sup>®</sup> — Stateful Computations over Data Streams
-
-{{< img src="/img/flink-home-graphic.png" width="800px" >}}
-
-{{< columns >}} <!-- begin columns block -->
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <span class="glyphicon glyphicon-th"></span> <b>All streaming use cases</b>
-    </div>
-    <div class="panel-body">
-        <ul style="font-size: small;">
-            <li>Event-driven Applications</li>
-            <li>Stream &amp; Batch Analytics</li>
-            <li>Data Pipelines &amp; ETL</li>
-            </ul>
-        <a href={{< relref "use-cases" >}}>Learn more</a>
-    </div>
-</div>
-
-<---> <!-- magic separator, between columns -->
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <span class="glyphicon glyphicon-ok"></span> <b>Guaranteed correctness</b>
-    </div>
-    <div class="panel-body">
-        <ul style="font-size: small;">
-            <li>Exactly-once state consistency</li>
-            <li>Event-time processing</li>
-            <li>Sophisticated late data handling</li>
-        </ul>
-    <a href="{{< relref "what-is-flink/flink-applications" >}}#building-blocks-for-streaming-applications">Learn more</a>
-    </div>
-</div>
-
-<---> <!-- magic separator, between columns -->
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <span class="glyphicon glyphicon glyphicon-sort-by-attributes"></span> <b>Layered APIs</b>
-    </div>
-    <div class="panel-body">
-        <ul style="font-size: small;">
-            <li>SQL on Stream &amp; Batch Data</li>
-            <li>DataStream API &amp; DataSet API</li>
-            <li>ProcessFunction (Time &amp; State)</li>
-        </ul>
-    <a href="{{< relref "what-is-flink/flink-applications" >}}#layered-apis">Learn more</a>
-    </div>
-</div>
-{{< /columns >}}
-
-{{< columns >}} <!-- begin columns block -->
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <span class="glyphicon glyphicon-dashboard"></span> <b>Operational Focus</b>
-    </div>
-    <div class="panel-body">
-        <ul style="font-size: small;">
-            <li>Flexible deployment</li>
-            <li>High-availability setup</li>
-            <li>Savepoints</li>
-        </ul>
-    <a href="{{< relref "what-is-flink/flink-operations" >}}">Learn more</a>
-    </div>
-</div>
-
-<---> <!-- magic separator, between columns -->
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <span class="glyphicon glyphicon-fullscreen"></span> <b>Scales to any use case</b>
-    </div>
-    <div class="panel-body">
-        <ul style="font-size: small;">
-            <li>Scale-out architecture</li>
-            <li>Support for very large state</li>
-            <li>Incremental checkpointing</li>
-        </ul>
-    <a href="{{< relref "what-is-flink/flink-architecture" >}}#run-applications-at-any-scale">Learn more</a>
-    </div>
-</div>
-
-<---> <!-- magic separator, between columns -->
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <span class="glyphicon glyphicon-flash"></span> <b>Excellent Performance</b>
-    </div>
-    <div class="panel-body">
-        <ul style="font-size: small;">
-            <li>Low latency</li>
-            <li>High throughput</li>
-            <li>In-Memory computing</li>
-        </ul>
-    <a href="{{< relref "what-is-flink/flink-architecture" >}}#leverage-in-memory-performance">Learn more</a>
+<div class="panels">
+    <div class="title">Flink Capabilities</div>
+    <div class="wrapper">
+        <div class="panel">
+            <div class="icon">
+                <img src="/img/flink-compatibility-icon.svg">
+            </div>
+            <div class="heading">Correctness guarantees</div>
+            <div class="body">
+                <p>Exactly-once state consistency</p>
+                <p>Event-time processing</p>
+                <p>Sophisticated late data handling</p>
+            </div>
+            <div class="button">
+                <a href="/what-is-flink/flink-applications#building-blocks-for-streaming-applications">
+                    <span>Learn more <i class="fa fa-chevron-right"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="icon">
+                <img src="/img/flink-layered-apis-icon.svg">
+            </div>
+            <div class="heading">Layered APIs</div>
+            <div class="body">
+                <p>SQL on Stream & Batch Data</p>
+                <p>DataStream API & DataSet API</p>
+                <p>ProcessFunction (Time & State)</p>
+            </div>
+            <div class="button">
+                <a href="/what-is-flink/flink-applications/#layered-apis">
+                    <span>Learn more <i class="fa fa-chevron-right"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="icon">
+                <img src="/img/flink-layered-apis-icon.svg">
+            </div>
+            <div class="heading">Operational focus</div>
+            <div class="body">
+                <p>Flexible deployment</p>
+                <p>High-availability setup</p>
+                <p>Savepoints</p>
+            </div>
+            <div class="button">
+                <a href="/what-is-flink/flink-operations/">
+                    <span>Learn more <i class="fa fa-chevron-right"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="icon">
+                <img src="/img/flink-scalability-icon.svg">
+            </div>
+            <div class="heading">Scalability</div>
+            <div class="body">
+                <p>Scale-out architecture</p>
+                <p>Support for very large state</p>
+                <p>Incremental checkpointing</p>
+            </div>
+            <div class="button">
+                <a href="/what-is-flink/flink-architecture/#run-applications-at-any-scale">
+                    <span>Learn more <i class="fa fa-chevron-right"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="icon">
+                <img src="/img/flink-performance-icon.svg">
+            </div>
+            <div class="heading">Performance</div>
+            <div class="body">
+                <p>Low latency</p>
+                <p>High throughput</p>
+                <p>In-Memory computing</p>
+            </div>
+            <div class="button">
+                <a href="/what-is-flink/flink-architecture/#leverage-in-memory-performance">
+                    <span>Learn more <i class="fa fa-chevron-right"></i></span>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
-{{< /columns >}}
 
-## Latest Blog Posts
+<div class="panels odd">
+    <div class="title">Use Cases</div>
+    <div class="wrapper">
+        <div class="panel">
+            <div class="icon">
+                <img src="/img/flink-compatibility-icon.svg">
+            </div>
+            <div class="heading">Event Driven Applications</div>
+            <div class="body">
+                <p>An event-driven application is a stateful application that ingest events from one or more event streams and reacts to incoming events by triggering computations, state updates, or external actions.</p>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="icon">
+                <img src="/img/flink-layered-apis-icon.svg">
+            </div>
+            <div class="heading">Stream & Batch Analytics</div>
+            <div class="body">
+                <p>Analytical jobs extract information and insight from raw data. Traditionally, analytics are performed as batch queries or applications on bounded data sets of recorded events.</p>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="icon">
+                <img src="/img/flink-layered-apis-icon.svg">
+            </div>
+            <div class="heading">Data Pipelines & ETL</div>
+            <div class="body">
+                <p>Extract-transform-load (ETL) is a common approach to convert and move data between storage systems.</p>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="button">
+            <a href="/use-cases/">
+                <span>Learn more about Flink use cases <i class="fa fa-chevron-right"></i></span>
+            </a>
+        </div>
+    </div>
+</div>
 
 {{< recent_posts >}}
