@@ -3,15 +3,22 @@
 //link :visited - #7749BF
 //Link :visited:hover - #6B40B2 (+ underlining the link)
 
+$container-max-width: 100rem;
+
 @mixin theme-light {
   --gray-100: #f8f9fa;
   --gray-200: #e9ecef;
   --gray-500: #adb5bd;
 
-  --link-color: white;
-  --link-hover-color: #99CBE4;
-  --visited-link-color: #A783E1;
-  --visited-link-hover-color: #B99CE7;
+  --color-link: #44B9D6;
+  --color-hover-link: #99CBE4;
+  --color-visited-link: #A783E1;
+  --color-hover-visited-link: #B99CE7;
+
+  --footer-link-color: white;
+  --footer-link-hover-color: #99CBE4;
+  --footer-link-visited-color: white;
+  --footer-link-visited-hover-color: #99CBE4;
 
   --body-background: #232F3E;
   --body-background-alt: #17202C;

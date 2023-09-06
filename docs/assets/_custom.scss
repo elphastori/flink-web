@@ -25,18 +25,18 @@
 
 
 a {
-    color: var(--link-color);
+    color: var(--color-link);
 
     &:visited {
-        color: var(--visited-link-color);
+        color: var(--color-visited-link);
     }
 
     &:hover {
-        color: var(--link-hover-color);
+        color: var(--color-hover-link);
         text-decoration: underline;
 
         &:visited {
-            color: var(--visited-link-hover-color);
+            color: var(--color-hover-visited-link);
         }
     }
 
@@ -56,6 +56,5 @@ hr {
 .truncate {
     overflow: hidden;
     max-width: 75ch;
-    
     text-overflow: ellipsis;
 }
