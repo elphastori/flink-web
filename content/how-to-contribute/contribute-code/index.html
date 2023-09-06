@@ -23,8 +23,8 @@ Please feel free to ask questions at any time. Either send a mail to the Dev mai
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="alternate" hreflang="zh" href="https://flink.apache.org/zh/how-to-contribute/contribute-code/" title="贡献代码">
 
-<link rel="stylesheet" href="/book.min.be770f4bad94ad088ca5074fd58e3d3acdcb392c75e799619dda92957f7e22b6.css" integrity="sha256-vncPS62UrQiMpQdP1Y49Os3LOSx155lhndqSlX9&#43;IrY=">
-<script defer src="/en.search.min.1e52ae623c5dfc48c431d62cf754c9626056cfdc2c293bb1a8d7e5b9d0960475.js" integrity="sha256-HlKuYjxd/EjEMdYs91TJYmBWz9wsKTuxqNfludCWBHU="></script>
+<link rel="stylesheet" href="/book.min.87a3ee1ac6eb7fa4f9866061f3172cba1cf15a30265c7c16cb6a030a316f870b.css" integrity="sha256-h6PuGsbrf6T5hmBh8xcsuhzxWjAmXHwWy2oDCjFvhws=">
+<script defer src="/en.search.min.d4f0a8eb2523bf2813989d973854d570fa4452ca791f16222e9a09245d3f9363.js" integrity="sha256-1PCo6yUjvygTmJ2XOFTVcPpEUsp5HxYiLpoJJF0/k2M="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -123,6 +123,14 @@ https://github.com/alex-shpak/hugo-book
             
   
     <a class="dropdown-item" href="/what-is-flink/roadmap/">Roadmap</a>
+  
+
+          </li>
+        
+          <li>
+            
+  
+    <a class="dropdown-item" href="/what-is-flink/community/">Community & Project Info</a>
   
 
           </li>
@@ -519,14 +527,14 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#contributing-code">#</a>
 </h1>
 <p>Apache Flink is maintained, improved, and extended by code contributions of volunteers. We welcome contributions to Flink, but due to the size of the project and to preserve the high quality of the code base, we follow a contribution process that is explained in this document.</p>
-<p><strong>Please feel free to ask questions at any time.</strong> Either send a mail to the <a href="/community/#mailing-lists">Dev mailing list</a> or comment on the Jira issue you are working on.</p>
+<p><strong>Please feel free to ask questions at any time.</strong> Either send a mail to the <a href="/what-is-flink/community/#mailing-lists">Dev mailing list</a> or comment on the Jira issue you are working on.</p>
 <p><strong>IMPORTANT</strong>: Please read this document carefully before starting to work on a code contribution. Follow the process and guidelines explained below. Contributing to Apache Flink does not start with opening a pull request. We expect contributors to reach out to us first to discuss the overall approach together. Without consensus with the Flink committers, contributions might require substantial rework or will not be reviewed.</p>
 <h2 id="looking-for-what-to-contribute">
   Looking for what to contribute
   <a class="anchor" href="#looking-for-what-to-contribute">#</a>
 </h2>
 <p>If you have a good idea for the contribution, you can proceed to <a href="#code-contribution-process">the code contribution process</a>.
-If you are looking for what you could contribute, you can browse open Jira issues in <a href="/community/#issue-tracker">Flink&rsquo;s bug tracker</a>,
+If you are looking for what you could contribute, you can browse open Jira issues in <a href="/what-is-flink/community/#issue-tracker">Flink&rsquo;s bug tracker</a>,
 which are not assigned, and then follow <a href="#code-contribution-process">the code contribution process</a>. If you are very new
 to the Flink project and want to learn about it and its contribution process, you can check
 <a href="https://issues.apache.org/jira/issues/?filter=12349196">the starter issues</a>, which are annotated with a <em>starter</em> label.</p>
@@ -652,8 +660,8 @@ to the Flink project and want to learn about it and its contribution process, yo
   <a class="anchor" href="#1-create-jira-ticket-and-reach-consensus">#</a>
 </h3>
 <p>The first step for making a contribution to Apache Flink is to reach consensus with the Flink community. This means agreeing on the scope and implementation approach of a change.</p>
-<p>In most cases, the discussion should happen in <a href="/community/#issue-tracker">Flink&rsquo;s bug tracker: Jira</a>.</p>
-<p>The following types of changes require a <code>[DISCUSS]</code> thread on the <a href="/community/#mailing-lists">Flink Dev mailing list</a>:</p>
+<p>In most cases, the discussion should happen in <a href="/what-is-flink/community/#issue-tracker">Flink&rsquo;s bug tracker: Jira</a>.</p>
+<p>The following types of changes require a <code>[DISCUSS]</code> thread on the <a href="/what-is-flink/community/#mailing-lists">Flink Dev mailing list</a>:</p>
 <ul>
 <li>big changes (major new feature; big refactorings, involving multiple components)</li>
 <li>potentially controversial changes or issues</li>
@@ -692,8 +700,8 @@ The Flink community considers the following aspects:
 </ul>
 </li>
 </ul>
-<p>If a change is identified as a large or controversial change in the discussion on Jira, it might require a <a href="https://cwiki.apache.org/confluence/display/FLINK/Flink&#43;Improvement&#43;Proposals">Flink Improvement Proposal (FLIP)</a> or a discussion on the <a href="/community/#mailing-lists">Dev mailing list</a> to reach agreement and consensus.</p>
-<p>Contributors can expect to get a first reaction from a committer within a few days after opening the ticket. If a ticket doesn&rsquo;t get any attention, we recommend reaching out to the <a href="/community/#mailing-lists">developer mailing list</a>. Note that the Flink community sometimes does not have the capacity to accept all incoming contributions.</p>
+<p>If a change is identified as a large or controversial change in the discussion on Jira, it might require a <a href="https://cwiki.apache.org/confluence/display/FLINK/Flink&#43;Improvement&#43;Proposals">Flink Improvement Proposal (FLIP)</a> or a discussion on the <a href="/what-is-flink/community/#mailing-lists">Dev mailing list</a> to reach agreement and consensus.</p>
+<p>Contributors can expect to get a first reaction from a committer within a few days after opening the ticket. If a ticket doesn&rsquo;t get any attention, we recommend reaching out to the <a href="/what-is-flink/community/#mailing-lists">developer mailing list</a>. Note that the Flink community sometimes does not have the capacity to accept all incoming contributions.</p>
 <p>Once all requirements for the ticket are met, a committer will assign somebody to the <em><code>Assignee</code></em> field of the ticket to work on it.
 Only committers have the permission to assign somebody.</p>
 <p><strong>Pull requests belonging to unassigned Jira tickets will not be reviewed or merged by the community</strong>.</p>
@@ -747,6 +755,23 @@ Only committers have the permission to assign somebody.</p>
 </div>
   
  
+      
+
+
+
+  
+    
+    <div class="edit-this-page">
+      <p>
+        <a href="https://cwiki.apache.org/confluence/display/FLINK/Flink+Translation+Specifications">Want to contribute translation?</a>
+      </p>
+      <p>
+        <a href="//github.com/apache/flink-web/edit/asf-site/docs/content/how-to-contribute/contribute-code.md">
+          Edit This Page<i class="fa fa-edit fa-fw"></i> 
+        </a>
+      </p>
+    </div>
+
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
@@ -777,11 +802,6 @@ Only committers have the permission to assign somebody.</p>
           <li>
             <a href="https://www.apache.org/licenses/">License</a>
           </li>
-          
-            <li>
-              <a href="https://cwiki.apache.org/confluence/display/FLINK/Flink+Translation+Specifications">Contribute translation</a>
-            </li>
-          
        </ul>
       </div>
       <div class="panel">
@@ -798,15 +818,6 @@ Only committers have the permission to assign somebody.</p>
           <li>
             <a href="/zh/">中文版</a>
           </li>
-          
-            
-            
-            <li>
-              <a href="//github.com/apache/flink-web/edit/asf-site/docs/content/how-to-contribute/contribute-code.md">
-                <i class="fa fa-edit fa-fw"></i> Edit This Page
-              </a>
-            </li>
-          
        </ul>
       </div>
       <div class="panel icons">

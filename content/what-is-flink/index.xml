@@ -56,5 +56,14 @@ Apache Flink puts a strong focus on the operational aspects of stream processing
       <description>Roadmap # Preamble: This roadmap means to provide users and contributors with a high-level summary of ongoing efforts, grouped by the major threads to which the efforts belong. With so much that is happening in Flink, we hope that this helps with understanding the direction of the project. The roadmap contains both efforts in early stages as well as nearly completed efforts, so that users may get a better impression of the overall status and direction of those developments.</description>
     </item>
     
+    <item>
+      <title>Community &amp; Project Info</title>
+      <link>https://flink.apache.org/what-is-flink/community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://flink.apache.org/what-is-flink/community/</guid>
+      <description>Community &amp;amp; Project Info # How do I get help from Apache Flink? # There are many ways to get help from the Apache Flink community. The mailing lists are the primary place where all Flink committers are present. For user support and questions use the user mailing list. You can also join the community on Slack. Some committers are also monitoring Stack Overflow. Please remember to tag your questions with the apache-flink tag.</description>
+    </item>
+    
   </channel>
 </rss>

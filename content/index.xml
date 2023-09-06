@@ -180,6 +180,15 @@ Apache Flink 1.</description>
     </item>
     
     <item>
+      <title>Community &amp; Project Info</title>
+      <link>https://flink.apache.org/what-is-flink/community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://flink.apache.org/what-is-flink/community/</guid>
+      <description>Community &amp;amp; Project Info # How do I get help from Apache Flink? # There are many ways to get help from the Apache Flink community. The mailing lists are the primary place where all Flink committers are present. For user support and questions use the user mailing list. You can also join the community on Slack. Some committers are also monitoring Stack Overflow. Please remember to tag your questions with the apache-flink tag.</description>
+    </item>
+    
+    <item>
       <title>Kubernetes Operator $FlinkKubernetesOperatorStableShortVersion (latest)</title>
       <link>https://flink.apache.org/documentation/flink-kubernetes-operator-stable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2706,15 +2715,6 @@ License # Apache license headers.</description>
       <guid>https://flink.apache.org/how-to-contribute/code-style-and-quality-scala/</guid>
       <description>Code Style and Quality Guide — Scala # Preamble # Pull Requests &amp;amp; Changes # Common Coding Guide # Java Language Guide # Scala Language Guide # Components Guide # Formatting Guide # Scala Language Features # Where to use (and not use) Scala # We use Scala for Scala APIs or pure Scala Libraries.
 We do not use Scala in the core APIs and runtime components. We aim to remove existing Scala use (code and dependencies) from those components.</description>
-    </item>
-    
-    <item>
-      <title>Community &amp; Project Info</title>
-      <link>https://flink.apache.org/community/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://flink.apache.org/community/</guid>
-      <description>Community &amp;amp; Project Info # How do I get help from Apache Flink? # There are many ways to get help from the Apache Flink community. The mailing lists are the primary place where all Flink committers are present. For user support and questions use the user mailing list. You can also join the community on Slack. Some committers are also monitoring Stack Overflow. Please remember to tag your questions with the apache-flink tag.</description>
     </item>
     
     <item>

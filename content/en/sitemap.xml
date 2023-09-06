@@ -233,6 +233,8 @@
                 href="https://flink.apache.org/getting-started/training-course/"
                 />
   </url><url>
+    <loc>https://flink.apache.org/what-is-flink/community/</loc>
+  </url><url>
     <loc>https://flink.apache.org/documentation/flink-kubernetes-operator-stable/</loc>
     <xhtml:link
                 rel="alternate"
@@ -1162,18 +1164,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://flink.apache.org/how-to-contribute/code-style-and-quality-scala/"
-                />
-  </url><url>
-    <loc>https://flink.apache.org/community/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://flink.apache.org/zh/community/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://flink.apache.org/community/"
                 />
   </url><url>
     <loc>https://flink.apache.org/flink-packages/</loc>
