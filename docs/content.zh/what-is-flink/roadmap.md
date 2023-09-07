@@ -43,7 +43,7 @@ under the License.
 如有任何疑问，请联系开发人员邮件列表：[dev@flink.apache.org](mailto:dev@flink.apache.org)
 。
 
-<div class="row front-graphic">
+<div>
   {{< img src="/img/flink_feature_radar_zh_4.svg" width="700px" >}}
 </div>
 

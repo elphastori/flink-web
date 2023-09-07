@@ -39,7 +39,7 @@ The feature radar is meant to give users guidance regarding feature maturity, as
 are approaching end-of-life. For questions, please contact the developer mailing list:
 [dev@flink.apache.org](mailto:dev@flink.apache.org)
 
-<div class="row front-graphic">
+<div>
   {{< img src="/img/flink_feature_radar_4.svg" width="700px" >}}
 </div>
 

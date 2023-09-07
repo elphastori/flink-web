@@ -3,12 +3,12 @@
     font-style: normal;
     background-color: var(--navbar-background-colour);
 
-    a:hover, a:visited, a:hover:visited, a i {
+    a:hover, a:visited, a:hover:visited, a i, #book-search-results li, #book-search-results li a {
         text-decoration: none;
         color: var(--navbar-dropdown-hover-text-color);
     }
 
-    a.dropdown-item, #book-search-results li {
+    a.dropdown-item, #book-search-results li, #book-search-results li a {
         &:hover, &:visited {
             background-color: var(--navbar-dropdown-hover-background-color);
         }

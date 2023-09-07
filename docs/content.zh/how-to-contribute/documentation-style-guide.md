@@ -27,16 +27,10 @@ Flink 同时维护了 **英文** 和 **中文** 两种文档，当你拓展或�
 
 * **使用主动语态。**[主动语态](https://medium.com/@DaphneWatson/technical-writing-active-vs-passive-voice-485dfaa4e498)简洁，并让内容更具有吸引力。如果你在句子的动词后添加 _by zombies_ 后仍然读的通，那么你用的就是被动语态。
 
-  <div class="alert alert-info">
-    <b>主动语态</b>
-    <p>"You can run this example in your IDE or on the command line."</p>
-
-    <p></p>
-
-  <b>被动语态</b>
-    <p>"This example can be run in your IDE or on the command line (by zombies)."</p>
-  </div>
-
+  * **主动语态**
+    "You can run this example in your IDE or on the command line."
+  * **被动语态**
+    "This example can be run in your IDE or on the command line (by zombies)."
 
   <div class="alert alert-info"> 
     <b>关于语态：</b>
@@ -81,11 +75,10 @@ Markdown](https://guides.github.com/features/mastering-markdown/) 和纯 [HTML](
 
 除 Markdown 之外，每个文件还包含一个 YAML [前言区块](https://jekyllrb.com/docs/front-matter/)，用于设置页面变量以及元数据。前言必须在文件的最开始，由三条虚线之间的有效 YAML 集合来指定。
 
-<div class="alert alert-warning">
-  <h3>Apache 许可证</h3>
+### Apache 许可证
 
-  <p>对于每一个文档， 前言后都应当紧随一个Apache 许可证声明。两种语言版本的声明都用英语表示，并按照如下实例完全复制。</p>
-</div>
+对于每一个文档， 前言后都应当紧随一个Apache 许可证声明。两种语言版本的声明都用英语表示，并按照如下实例完全复制。
+
 
 ```
 ---

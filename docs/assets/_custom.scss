@@ -24,6 +24,38 @@
 @import "toc";
 @import "github";
 
+.markdown {
+    h1 {
+        font-size: 2.5rem;
+        padding-top: 0.75em;
+        padding-bottom: 0.25em;
+        margin: 0;
+    }
+
+    h2 {
+        border-top: 1px solid var(--border-color);
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 1em;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
 a {
     color: var(--color-link);
 
@@ -60,6 +92,12 @@ hr {
 }
 
 .markdown {
+
+    pre {
+        background-color: var(--code-inline-block-background-color);
+        color: var(--code-inline-block-text-color);
+    }
+
     code {
         background-color: var(--code-inline-block-background-color);
         color: var(--code-inline-block-text-color);

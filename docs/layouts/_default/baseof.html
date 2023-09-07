@@ -51,11 +51,19 @@ under the License.
 
   {{ partial "docs/navbar" . }} 
 
-  {{ if .IsPage }}
+  {{ if .Params.hero }}
+    <header>
+      {{ template "header" . }}
+    </header>
+
+    <main>
+      {{ template "main" . }}
+    </main>
+  {{ else }}
   <main class="flex">
     {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
       <aside class="book-toc">
-        {{ template "toc" . }} <!-- Table of Contents -->
+        {{ template "toc" . }}
       </aside>
       <aside class="expand-toc hidden">
         <a class="toc" onclick="expandToc()" href="javascript:void(0)">
@@ -66,15 +74,14 @@ under the License.
 
     <div class="container book-page">
       <header class="book-header">
-        {{ template "header" . }} <!-- Mobile layout header -->
+        {{ template "header" . }}
       </header>
 
-
       {{ partial "docs/inject/content-before" . }}
-      {{ template "main" . }} <!-- Page Content -->
+      {{ template "main" . }}
       {{ partial "docs/inject/content-after" . }}
 
-      {{ template "comments" . }} <!-- Comments block -->
+      {{ template "comments" . }}
       {{ partial "docs/edit-this-page" . }}
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -82,60 +89,14 @@ under the License.
   </main> 
 
   {{ partial "docs/inject/body" . }}
-  {{ else }}
-  <header>
-    {{ template "header" . }}
-  </header>
 
-  <main>
-    {{ template "main" . }} <!-- Page Content -->
-  </main>
   {{ end }}
 
   <footer>
     {{ template "footer" . }} <!-- Footer under page content -->
     {{ partial "docs/inject/footer" . }}
   </footer>
-
-  <!-- <main class="container flex"> -->
-    <!-- <aside class="book-menu"> -->
-      <!-- {{ template "menu" . }} Left menu Content -->
-    <!-- </aside> -->
-
-    <!-- <div class="book-page"> -->
-      <!-- <header class="book-header"> -->
-        <!-- {{ template "header" . }} Mobile layout header -->
-      <!-- </header> -->
-
-    
-      <!-- {{ partial "docs/inject/content-before" . }} -->
-      <!-- {{ template "main" . }} Page Content -->
-      <!-- {{ partial "docs/inject/content-after" . }} -->
-
-      <!-- <footer class="book-footer"> -->
-        
-      <!-- </footer> -->
-
-      <!-- {{ template "comments" . }} Comments block -->
-
-      <!-- <label for="menu-control" class="hidden book-menu-overlay"></label> -->
-    <!-- </div> -->
-
-    <!-- {{ if default true (default .Site.Params.BookToC .Params.BookToC) }} -->
-    <!-- <aside class="book-toc"> -->
-      <!-- {{ template "toc" . }} Table of Contents -->
-    <!-- </aside> -->
-    <!-- <aside class="expand-toc"> -->
-      <!-- <button class="toc" onclick="expandToc()"> -->
-        <!-- <i class="fa fa-expand" aria-hidden="true"></i> -->
-      <!-- </button> -->
-    <!-- </aside> -->
-    <!-- {{ end }} -->
-  <!-- </main> -->
-
-  <!-- {{ partial "docs/inject/body" . }} -->
 </body>
-
 </html>
 
 {{ define "menu" }}
