@@ -21,8 +21,8 @@ The backpressure topic was tackled from different angles over the last couple of
 <title>How to identify the source of backpressure? | Apache Flink</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.e965b665adeb5b90793c907877b174201ee56713f05abc16ae79fe128f8ddf9a.css" integrity="sha256-6WW2Za3rW5B5PJB4d7F0IB7lZxPwWrwWrnn&#43;Eo&#43;N35o=">
-<script defer src="/en.search.min.d4f0a8eb2523bf2813989d973854d570fa4452ca791f16222e9a09245d3f9363.js" integrity="sha256-1PCo6yUjvygTmJ2XOFTVcPpEUsp5HxYiLpoJJF0/k2M="></script>
+<link rel="stylesheet" href="/book.min.e168028e84e61e0060560516b136d6286255260b0ff17536124f309302d3f8a0.css" integrity="sha256-4WgCjoTmHgBgVgUWsTbWKGJVJgsP8XU2Ek8wkwLT&#43;KA=">
+<script defer src="/en.search.min.5280aca1baac2c0455e06270bdc51c47f79db64bf7bb68971f2836f6889a782c.js" integrity="sha256-UoCsobqsLARV4GJwvcUcR/edtkv3u2iXHyg29oiaeCw="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -456,7 +456,7 @@ https://github.com/alex-shpak/hugo-book
   </ul>
 </nav>
 
- 
+
       </aside>
       <aside class="expand-toc hidden">
         <a class="toc" onclick="expandToc()" href="javascript:void(0)">
@@ -518,9 +518,8 @@ https://github.com/alex-shpak/hugo-book
 
   </aside>
   
- 
-      </header>
 
+      </header>
 
       
 
@@ -544,7 +543,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p><div class="row front-graphic">
+    <p><div>
   <img src="/img/blog/2021-07-07-backpressure/animated.png" alt="Backpressure monitoring in the web UI"/>
 	<p class="align-center">Backpressure monitoring in the web UI</p>
 </div>
@@ -600,7 +599,7 @@ is especially true for batch processing.</p>
 <p>One way to detect backpressure is to use <a href="//nightlies.apache.org/flink/flink-docs-release-1.13/docs/ops/metrics/#system-metrics">metrics</a>,
 however, in Flink 1.13 it’s no longer necessary to dig so deep. In most cases, it should be enough to just
 look at the job graph in the Web UI.</p>
-<div class="row front-graphic">
+<div>
   <img src="/img/blog/2021-07-07-backpressure/simple-example.png"/>
 </div>
 <p>The first thing to note in the example above is that different tasks have different colors. Those colors
@@ -612,7 +611,7 @@ be the source of the backpressure (the bottleneck).</p>
 <p>If you click on one particular task and go into the “BackPressure” tab you will be able to further dissect
 the problem and check what is the busy/backpressured/idle status of every subtask in that task. For example,
 this is especially handy if there is a data skew and not all subtasks are equally utilized.</p>
-<div class="row front-graphic">
+<div>
   <img src="/img/blog/2021-07-07-backpressure/subtasks.png" alt="Backpressure among subtasks"/>
 	<p class="align-center">Backpressure among subtasks</p>
 </div>
@@ -649,7 +648,7 @@ Fortunately, this is only relevant for two cases:</p>
 as the value for busyTimeMsPerSecond. For more information on the topic of Data Sources please
 <a href="//nightlies.apache.org/flink/flink-docs-release-1.13/docs/dev/datastream/sources/">take a look here</a>.</li>
 </ul>
-<div class="row front-graphic">
+<div>
   <img src="/img/blog/2021-07-07-backpressure/source-task-busy.png" alt="Old-style sources do not report busy time"/>
 	<p class="align-center">Old-style sources do not report busy time</p>
 </div>
@@ -669,11 +668,11 @@ second between being fully busy and fully idle will be reporting the same value 
 of 500ms/s.</p>
 <p>Furthermore, varying load and especially firing windows can move the bottleneck to a different place in
 the job graph:</p>
-<div class="row front-graphic">
+<div>
   <img src="/img/blog/2021-07-07-backpressure/bottleneck-zoom.png" alt="Bottleneck alternating between two tasks"/>
 	<p class="align-center">Bottleneck alternating between two tasks</p>
 </div>
-<div class="row front-graphic">
+<div>
   <img src="/img/blog/2021-07-07-backpressure/sliding-window.png" alt="SlidingWindowOperator"/>
 	<p class="align-center">SlidingWindowOperator</p>
 </div>
@@ -714,7 +713,7 @@ jobs that much easier! Please upgrade to Flink 1.13.x and try them out!</p>
 the downstream task will have empty input buffers, while upstream output buffers will be full. <a class="anchor" id="1"></a></p>
 </p>
 </article>
- 
+
       
 
       
@@ -723,7 +722,7 @@ the downstream task will have empty input buffers, while upstream output buffers
 
 </div>
   
- 
+
       
 
 
@@ -747,6 +746,7 @@ the downstream task will have empty input buffers, while upstream output buffers
   </main> 
 
   
+
   
 
   <footer>
@@ -823,46 +823,7 @@ the downstream task will have empty input buffers, while upstream output buffers
  
     
   </footer>
-
-  
-    
-      
-    
-
-    
-      
-        
-      
-
-    
-      
-      
-      
-
-      
-        
-      
-
-      
-
-      
-    
-
-    
-    
-      
-    
-    
-      
-        
-      
-    
-    
-  
-
-  
 </body>
-
 </html>
 
 

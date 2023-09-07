@@ -272,10 +272,7 @@ git push origin myBranch 打开你的 fork 仓库网页 (https://github.com/&lt;
 开一个翻译的 JIRA 请求单，并打上 chinese-translation 的标签； 在此请求单上添加到原始 JIRA 请求单的链接。 正在寻求有助于将现有文档翻译成中文的风格指南？请继续查阅 这个翻译规范。
 语言风格 # 如下，你可以看到一些初步的原则，这些原则可以确保书写中的可读性和通俗易懂。如果想更深入、更细致的了解语言风格，也可以参考 通用准则。
 语态和语气 # 使用主动语态。主动语态简洁，并让内容更具有吸引力。如果你在句子的动词后添加 by zombies 后仍然读的通，那么你用的就是被动语态。
-主动语态 "You can run this example in your IDE or on the command line."
-被动语态
-"This example can be run in your IDE or on the command line (by zombies)."
-关于语态： 如上语态规范主要是写英文文档过程中注意，中文文档仍然以 这个翻译规范 为准 使用你，而不是我们。 用 我们 会让用户感到困惑以及傲慢，给人“我们是一个秘密组织的成员，而 你 并没有获得会员邀请”的感觉。所以用 你 来建议用户。
+主动语态 &ldquo;You can run this example in your IDE or on the command line.&rdquo; 被动语态 &ldquo;This example can be run in your IDE or on the command line (by zombies).&rdquo; 关于语态： 如上语态规范主要是写英文文档过程中注意，中文文档仍然以 这个翻译规范 为准 使用你，而不是我们。 用 我们 会让用户感到困惑以及傲慢，给人“我们是一个秘密组织的成员，而 你 并没有获得会员邀请”的感觉。所以用 你 来建议用户。
 **避免使用针对性别和文化的语言。**文档无需指定性别：技术写作应当 性别中立。还有，在你的文化和日常交流中被认为是理所应当的行话和惯例，在其他地方可能很不一样。幽默就是很典型的例子：在某个文化中很棒的笑话，但在其他文化中可能被广泛误解。
 **避免对操作做能力限定以及对难度提前下结论。**对于很艰难才能完成操作或者操作中很容易沮丧的用户，使用诸如 快速 或者 容易 是糟糕的文档体验。
 避免使用大写单词来突出或者强调陈述。使用例如 加粗 或者 斜体 来突出关键词通常会更礼貌。如果一个不明显的声明需要突出以引起更多的注意，可以按照段落分组，段落以标签开头，配合对应的 HTML 标记来突出显示：
@@ -284,7 +281,7 @@ git push origin myBranch 打开你的 fork 仓库网页 (https://github.com/&lt;
 语法 # The documentation website is generated using Hugo and the pages are written in Markdown, a lightweight portable format for web publishing (but not limited to it).
 拓展语法 # Markdown 还可以混合使用 GitHub 风格的 Markdown 和纯 HTML。 例如，一些贡献者更喜欢使用 HTML 标签来表示图片，这种混合的方式就很方便。
 前言 # 除 Markdown 之外，每个文件还包含一个 YAML 前言区块，用于设置页面变量以及元数据。前言必须在文件的最开始，由三条虚线之间的有效 YAML 集合来指定。
-Apache 许可证 对于每一个文档， 前言后都应当紧随一个Apache 许可证声明。两种语言版本的声明都用英语表示，并按照如下实例完全复制。
+Apache 许可证 # 对于每一个文档， 前言后都应当紧随一个Apache 许可证声明。两种语言版本的声明都用英语表示，并按照如下实例完全复制。
 --- title: Concepts layout: redirect --- &lt;!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to you under the Apache License, Version 2.0 (the &#34;License&#34;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &#34;AS IS&#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. --&gt; 下面是 Flink 文档前言中常用的变量。
 变量名 可能值 描述 布局 layout {base,plain,redirect} 要使用的布局文件。布局文件位于 _layouts 目录下。 内容 title %s 此标题是页面最顶部 （1级） 的标题。 导航 nav-id %s 页面 ID。其他页面可以使用此 ID 作为他们的 nav-parent_id。 nav-parent_id {root,%s} 页面父级 ID。最低导航级别为 root。 nav-pos %d 在每个导航级别下页面的相对位置。 nav-title %s 此标题用于重载默认的文本链接（标题） 文档范围的信息和配置位于 _config.yml 下，在前言中也是可用的，通过 site 变量使用。可以使用以下语法访问这些设置：
 {{ &#34;{{ site.CONFIG_KEY &#34; }}}} 当生成文档时，占位符会被替换成变量 CONFIG_KEY 的值。

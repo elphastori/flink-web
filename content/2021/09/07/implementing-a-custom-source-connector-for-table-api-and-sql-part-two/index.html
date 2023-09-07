@@ -23,8 +23,8 @@ integrate a source connector which connects to a mailbox using the IMAP protocol
 <title>Implementing a custom source connector for Table API and SQL - Part Two  | Apache Flink</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.e965b665adeb5b90793c907877b174201ee56713f05abc16ae79fe128f8ddf9a.css" integrity="sha256-6WW2Za3rW5B5PJB4d7F0IB7lZxPwWrwWrnn&#43;Eo&#43;N35o=">
-<script defer src="/en.search.min.d4f0a8eb2523bf2813989d973854d570fa4452ca791f16222e9a09245d3f9363.js" integrity="sha256-1PCo6yUjvygTmJ2XOFTVcPpEUsp5HxYiLpoJJF0/k2M="></script>
+<link rel="stylesheet" href="/book.min.e168028e84e61e0060560516b136d6286255260b0ff17536124f309302d3f8a0.css" integrity="sha256-4WgCjoTmHgBgVgUWsTbWKGJVJgsP8XU2Ek8wkwLT&#43;KA=">
+<script defer src="/en.search.min.5280aca1baac2c0455e06270bdc51c47f79db64bf7bb68971f2836f6889a782c.js" integrity="sha256-UoCsobqsLARV4GJwvcUcR/edtkv3u2iXHyg29oiaeCw="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -452,7 +452,7 @@ https://github.com/alex-shpak/hugo-book
   </ul>
 </nav>
 
- 
+
       </aside>
       <aside class="expand-toc hidden">
         <a class="toc" onclick="expandToc()" href="javascript:void(0)">
@@ -508,9 +508,8 @@ https://github.com/alex-shpak/hugo-book
 
   </aside>
   
- 
-      </header>
 
+      </header>
 
       
 
@@ -952,7 +951,7 @@ user
 <p>Since the example connector in this blog post is still a bit limited, you will use the finished connector in this <a href="github.com/TNG/flink-connector-email">repository</a> instead. You can clone that repository and build it the same way to obtain the JAR file.</p>
 <p>For this example, let&rsquo;s connect to a Gmail account. This requires SSL and comes with an additional caveat that you need to enable two-factor authentication and create an application password to use instead of your real password.</p>
 <p>First, head to SQL → Connectors. There you can create a new connector by uploading your JAR file. The platform will detect the connector options automatically. Afterwards, go back to the SQL Editor and you should now be able to use the connector.</p>
-<div class="row front-graphic">
+<div>
   <img src="/img/blog/2021-09-07-connector-table-sql-api/VVP-SQL-Editor.png" alt="Ververica Platform - SQL Editor"/>
 	<p class="align-center">Ververica Platform - SQL Editor</p>
 </div>
@@ -964,7 +963,7 @@ user
 <p>Flink also exposes APIs on top of which custom connectors can be built. In this two-part blog series, you explored some of these APIs and concepts and learned how to implement your own custom source connector that can read in data from an email inbox. You then used Flink to process incoming emails through the IMAP protocol and wrote some Flink SQL.</p>
 </p>
 </article>
- 
+
       
 
       
@@ -973,7 +972,7 @@ user
 
 </div>
   
- 
+
       
 
 
@@ -997,6 +996,7 @@ user
   </main> 
 
   
+
   
 
   <footer>
@@ -1073,46 +1073,7 @@ user
  
     
   </footer>
-
-  
-    
-      
-    
-
-    
-      
-        
-      
-
-    
-      
-      
-      
-
-      
-        
-      
-
-      
-
-      
-    
-
-    
-    
-      
-    
-    
-      
-        
-      
-    
-    
-  
-
-  
 </body>
-
 </html>
 
 

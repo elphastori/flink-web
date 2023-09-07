@@ -23,8 +23,8 @@ Language # The Flink documentation is maintained in US English and Chinese — w
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="alternate" hreflang="zh" href="https://flink.apache.org/zh/how-to-contribute/documentation-style-guide/" title="文档样式指南">
 
-<link rel="stylesheet" href="/book.min.e965b665adeb5b90793c907877b174201ee56713f05abc16ae79fe128f8ddf9a.css" integrity="sha256-6WW2Za3rW5B5PJB4d7F0IB7lZxPwWrwWrnn&#43;Eo&#43;N35o=">
-<script defer src="/en.search.min.d4f0a8eb2523bf2813989d973854d570fa4452ca791f16222e9a09245d3f9363.js" integrity="sha256-1PCo6yUjvygTmJ2XOFTVcPpEUsp5HxYiLpoJJF0/k2M="></script>
+<link rel="stylesheet" href="/book.min.e168028e84e61e0060560516b136d6286255260b0ff17536124f309302d3f8a0.css" integrity="sha256-4WgCjoTmHgBgVgUWsTbWKGJVJgsP8XU2Ek8wkwLT&#43;KA=">
+<script defer src="/en.search.min.5280aca1baac2c0455e06270bdc51c47f79db64bf7bb68971f2836f6889a782c.js" integrity="sha256-UoCsobqsLARV4GJwvcUcR/edtkv3u2iXHyg29oiaeCw="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -452,6 +452,7 @@ https://github.com/alex-shpak/hugo-book
           <ul>
             <li><a href="#extended-syntax">Extended Syntax</a></li>
             <li><a href="#front-matter">Front Matter</a></li>
+            <li><a href="#apache-license">Apache License</a></li>
           </ul>
         </li>
         <li><a href="#formatting">Formatting</a>
@@ -475,7 +476,7 @@ https://github.com/alex-shpak/hugo-book
   </ul>
 </nav>
 
- 
+
       </aside>
       <aside class="expand-toc hidden">
         <a class="toc" onclick="expandToc()" href="javascript:void(0)">
@@ -528,6 +529,7 @@ https://github.com/alex-shpak/hugo-book
           <ul>
             <li><a href="#extended-syntax">Extended Syntax</a></li>
             <li><a href="#front-matter">Front Matter</a></li>
+            <li><a href="#apache-license">Apache License</a></li>
           </ul>
         </li>
         <li><a href="#formatting">Formatting</a>
@@ -554,9 +556,8 @@ https://github.com/alex-shpak/hugo-book
 
   </aside>
   
- 
-      </header>
 
+      </header>
 
       
 
@@ -609,13 +610,12 @@ voice</a>
 supports brevity and makes content more engaging. If you add <em>by zombies</em>
 after the verb in a sentence and it still makes sense, you are using the
 passive voice.</p>
-<div class="alert alert-info">
-  <b>Active Voice</b>
-  <p>"You can run this example in your IDE or on the command line."</p>
-  <p></p>
-<p><b>Passive Voice</b></p>
-  <p>"This example can be run in your IDE or on the command line (by zombies)."</p>
-</div>
+<ul>
+<li><strong>Active Voice</strong>
+&ldquo;You can run this example in your IDE or on the command line.&rdquo;</li>
+<li><strong>Passive Voice</strong>
+&ldquo;This example can be run in your IDE or on the command line (by zombies).&rdquo;</li>
+</ul>
 </li>
 <li>
 <p><strong>Use you, never we.</strong> Using <em>we</em> can be confusing and patronizing to some
@@ -694,13 +694,13 @@ intermix.</p>
 block</a> that will be used to set
 variables and metadata on the page. The front matter must be the first thing in
 the file and must be specified as a valid YAML set between triple-dashed lines.</p>
-<div class="alert alert-warning">
-  <h3>Apache License</h3>
-  <p>For every documentation file, the front matter should be immediately
-  followed by the Apache License statement. For both language versions, this
-  block must be stated in US English and copied in the exact same words as in
-  the following example.</p>
-</div>
+<h3 id="apache-license">
+  Apache License
+  <a class="anchor" href="#apache-license">#</a>
+</h3>
+<p>For every documentation file, the front matter should be immediately
+followed by the Apache License statement. For both language versions, this
+block must be stated in US English and copied in the exact same words as inthe following example.</p>
 <pre tabindex="0"><code>---
 title: Concepts
 layout: redirect
@@ -816,12 +816,13 @@ consecutive — never skip a header level for styling reasons!</p>
 </thead>
 </table>
 </font>
-<div class="alert alert-warning">
-  <h3>Best Practice</h3>
+<h4 id="best-practice">
+  Best Practice
+  <a class="anchor" href="#best-practice">#</a>
+</h4>
 <p>Use descriptive language in the phrasing of headings. For example, for a
 documentation page on dynamic tables, &ldquo;Dynamic Tables and Continuous Queries&rdquo;
 is more descriptive than &ldquo;Background&rdquo; or &ldquo;Technical Information&rdquo;.</p>
-</div>
 <h3 id="table-of-contents">
   Table of Contents
   <a class="anchor" href="#table-of-contents">#</a>
@@ -833,13 +834,14 @@ generated from the headings of the page using the following line of markup:</p>
 from the TOC:</p>
 <pre tabindex="0"><code class="language-liquid" data-lang="liquid">{{ &#34;# Excluded Heading
 {:.no_toc&#34; }}}
-</code></pre><div class="alert alert-warning">
-  <h3>Best Practice</h3>
+</code></pre><h4 id="best-practice-1">
+  Best Practice
+  <a class="anchor" href="#best-practice-1">#</a>
+</h4>
 <p>Write a short and concise introduction to the topic that is being covered and
 place it before the TOC. A little context, such an outline of key messages,
 goes a long way in ensuring that the documentation is consistent and
 accessible to all levels of knowledge.</p>
-</div>
 <h3 id="navigation">
   Navigation
   <a class="anchor" href="#navigation">#</a>
@@ -851,11 +853,12 @@ that users can navigate to the top of the page without having to scroll back up
 manually. In markup, this is implemented as a placeholder that is replaced with
 a default link when generating the documentation:</p>
 <pre tabindex="0"><code class="language-liquid" data-lang="liquid">{{ &#34;{% top &#34; }}%}
-</code></pre><div class="alert alert-warning">
-  <h3>Best Practice</h3>
+</code></pre><h4 id="best-practice-2">
+  Best Practice
+  <a class="anchor" href="#best-practice-2">#</a>
+</h4>
 <p>It&rsquo;s recommended to use Back to Top links at least at the end of each Level-2
 section.</p>
-</div>
 <h3 id="annotations">
   Annotations
   <a class="anchor" href="#annotations">#</a>
@@ -902,11 +905,12 @@ making the heading lowercase and replacing internal spaces with hyphens.</p>
 <pre tabindex="0"><code class="language-liquid" data-lang="liquid">[Link Text](external_url)
 </code></pre></li>
 </ul>
-<div class="alert alert-warning">
-  <h3>Best Practice</h3>
+<h4 id="best-practice-3">
+  Best Practice
+  <a class="anchor" href="#best-practice-3">#</a>
+</h4>
 <p>Use descriptive links that provide information on the action or destination.
 For example, avoid using &ldquo;Learn More&rdquo; or &ldquo;Click Here&rdquo; links.</p>
-</div>
 <h3 id="visual-elements">
   Visual Elements
   <a class="anchor" href="#visual-elements">#</a>
@@ -921,13 +925,14 @@ links:</p>
   width="200px"
   style="display:block;margin-left:auto;margin-right:auto"
 >
-</code></pre><div class="alert alert-warning">
-  <h3>Best Practice</h3>
+</code></pre><h4 id="best-practice-4">
+  Best Practice
+  <a class="anchor" href="#best-practice-4">#</a>
+</h4>
 <p>Use flowcharts, tables and figures where appropriate or necessary for
 additional clarification, but never as a standalone source of information.
 Make sure that any text included in those elements is large enough to read
 and that the overall resolution is adequate.</p>
-</div>
 <h3 id="code">
   Code
   <a class="anchor" href="#code">#</a>
@@ -1075,7 +1080,7 @@ findable and welcoming to all users. The documentation is translated to other
 languages, so using simple language and familiar words also helps reduce the
 translation effort.</p>
 </article>
- 
+
       
 
       
@@ -1084,7 +1089,7 @@ translation effort.</p>
 
 </div>
   
- 
+
       
 
 
@@ -1108,6 +1113,7 @@ translation effort.</p>
   </main> 
 
   
+
   
 
   <footer>
@@ -1184,46 +1190,7 @@ translation effort.</p>
  
     
   </footer>
-
-  
-    
-      
-    
-
-    
-      
-        
-      
-
-    
-      
-      
-      
-
-      
-        
-      
-
-      
-
-      
-    
-
-    
-    
-      
-    
-    
-      
-        
-      
-    
-    
-  
-
-  
 </body>
-
 </html>
 
 

@@ -25,8 +25,8 @@ Process Unbounded and Bounded Data # Any kind of data is produced as a stream of
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="alternate" hreflang="zh" href="https://flink.apache.org/zh/what-is-flink/flink-architecture/" title="架构">
 
-<link rel="stylesheet" href="/book.min.e965b665adeb5b90793c907877b174201ee56713f05abc16ae79fe128f8ddf9a.css" integrity="sha256-6WW2Za3rW5B5PJB4d7F0IB7lZxPwWrwWrnn&#43;Eo&#43;N35o=">
-<script defer src="/en.search.min.d4f0a8eb2523bf2813989d973854d570fa4452ca791f16222e9a09245d3f9363.js" integrity="sha256-1PCo6yUjvygTmJ2XOFTVcPpEUsp5HxYiLpoJJF0/k2M="></script>
+<link rel="stylesheet" href="/book.min.e168028e84e61e0060560516b136d6286255260b0ff17536124f309302d3f8a0.css" integrity="sha256-4WgCjoTmHgBgVgUWsTbWKGJVJgsP8XU2Ek8wkwLT&#43;KA=">
+<script defer src="/en.search.min.5280aca1baac2c0455e06270bdc51c47f79db64bf7bb68971f2836f6889a782c.js" integrity="sha256-UoCsobqsLARV4GJwvcUcR/edtkv3u2iXHyg29oiaeCw="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -451,7 +451,7 @@ https://github.com/alex-shpak/hugo-book
   </ul>
 </nav>
 
- 
+
       </aside>
       <aside class="expand-toc hidden">
         <a class="toc" onclick="expandToc()" href="javascript:void(0)">
@@ -504,9 +504,8 @@ https://github.com/alex-shpak/hugo-book
 
   </aside>
   
- 
-      </header>
 
+      </header>
 
       
 
@@ -559,7 +558,7 @@ Flink features two deployment modes for applications, the *framework mode* and t
 
 * In the **library deployment mode**, a Flink application is packaged together with the Flink master executables into a (Docker) image. Another job-independent image contains the Flink worker executables. When a container is started from the job image, the Flink master process is started and the embedded application is automatically loaded. Containers started from the worker image, bootstrap Flink worker processes which automatically connect to the master process. A container manager such as Kubernetes monitors the running containers and automatically restarts failed containers. In this mode, you don't have to setup and maintain a Flink service in your cluster. Instead you package Flink as a library with your application. This model is very popular for deploying microservices. 
 
-<div class="row front-graphic">
+<div>
   
   <img 
     src="https://flink.apache.org/img/deployment-modes.png"
@@ -586,7 +585,7 @@ Flink features two deployment modes for applications, the *framework mode* and t
   <a class="anchor" href="#leverage-in-memory-performance">#</a>
 </h2>
 <p>Stateful Flink applications are optimized for local state access. Task state is always maintained in memory or, if the state size exceeds the available memory, in access-efficient on-disk data structures. Hence, tasks perform all computations by accessing local, often in-memory, state yielding very low processing latencies. Flink guarantees exactly-once state consistency in case of failures by periodically and asynchronously checkpointing the local state to durable storage.</p>
-<div class="row front-graphic">
+<div>
   
   <img 
     src="https://flink.apache.org/img/local-state.png"
@@ -596,7 +595,7 @@ Flink features two deployment modes for applications, the *framework mode* and t
   >
 </div>
 </article>
- 
+
       
 
       
@@ -605,7 +604,7 @@ Flink features two deployment modes for applications, the *framework mode* and t
 
 </div>
   
- 
+
       
 
 
@@ -629,6 +628,7 @@ Flink features two deployment modes for applications, the *framework mode* and t
   </main> 
 
   
+
   
 
   <footer>
@@ -705,46 +705,7 @@ Flink features two deployment modes for applications, the *framework mode* and t
  
     
   </footer>
-
-  
-    
-      
-    
-
-    
-      
-        
-      
-
-    
-      
-      
-      
-
-      
-        
-      
-
-      
-
-      
-    
-
-    
-    
-      
-    
-    
-      
-        
-      
-    
-    
-  
-
-  
 </body>
-
 </html>
 
 

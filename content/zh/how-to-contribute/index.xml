@@ -91,9 +91,7 @@ git clone https://github.com/&amp;lt;your-user-name&amp;gt;/flink.git 文档位�
 开一个翻译的 JIRA 请求单，并打上 chinese-translation 的标签； 在此请求单上添加到原始 JIRA 请求单的链接。 正在寻求有助于将现有文档翻译成中文的风格指南？请继续查阅 这个翻译规范。
 语言风格 # 如下，你可以看到一些初步的原则，这些原则可以确保书写中的可读性和通俗易懂。如果想更深入、更细致的了解语言风格，也可以参考 通用准则。
 语态和语气 # 使用主动语态。主动语态简洁，并让内容更具有吸引力。如果你在句子的动词后添加 by zombies 后仍然读的通，那么你用的就是被动语态。
-主动语态 &#34;You can run this example in your IDE or on the command line.&#34;
-被动语态
-&#34;This example can be run in your IDE or on the command line (by zombies).&#34;</description>
+主动语态 &amp;ldquo;You can run this example in your IDE or on the command line.&amp;rdquo; 被动语态 &amp;ldquo;This example can be run in your IDE or on the command line (by zombies).&amp;rdquo; 关于语态： 如上语态规范主要是写英文文档过程中注意，中文文档仍然以 这个翻译规范 为准 使用你，而不是我们。 用 我们 会让用户感到困惑以及傲慢，给人“我们是一个秘密组织的成员，而 你 并没有获得会员邀请”的感觉。所以用 你 来建议用户。</description>
     </item>
     
     <item>

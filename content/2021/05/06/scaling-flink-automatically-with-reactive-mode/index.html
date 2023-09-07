@@ -19,8 +19,8 @@
 <title>Scaling Flink automatically with Reactive Mode | Apache Flink</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.e965b665adeb5b90793c907877b174201ee56713f05abc16ae79fe128f8ddf9a.css" integrity="sha256-6WW2Za3rW5B5PJB4d7F0IB7lZxPwWrwWrnn&#43;Eo&#43;N35o=">
-<script defer src="/en.search.min.d4f0a8eb2523bf2813989d973854d570fa4452ca791f16222e9a09245d3f9363.js" integrity="sha256-1PCo6yUjvygTmJ2XOFTVcPpEUsp5HxYiLpoJJF0/k2M="></script>
+<link rel="stylesheet" href="/book.min.e168028e84e61e0060560516b136d6286255260b0ff17536124f309302d3f8a0.css" integrity="sha256-4WgCjoTmHgBgVgUWsTbWKGJVJgsP8XU2Ek8wkwLT&#43;KA=">
+<script defer src="/en.search.min.5280aca1baac2c0455e06270bdc51c47f79db64bf7bb68971f2836f6889a782c.js" integrity="sha256-UoCsobqsLARV4GJwvcUcR/edtkv3u2iXHyg29oiaeCw="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -451,7 +451,7 @@ https://github.com/alex-shpak/hugo-book
   </ul>
 </nav>
 
- 
+
       </aside>
       <aside class="expand-toc hidden">
         <a class="toc" onclick="expandToc()" href="javascript:void(0)">
@@ -510,9 +510,8 @@ https://github.com/alex-shpak/hugo-book
 
   </aside>
   
- 
-      </header>
 
+      </header>
 
       
 
@@ -542,7 +541,7 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>Streaming jobs which run for several days or longer usually experience variations in workload during their lifetime. These variations can originate from seasonal spikes, such as day vs. night, weekdays vs. weekend or holidays vs. non-holidays, sudden events or simply the growing popularity of your product. Although some of these variations are more predictable than others, in all cases there is a change in job resource demand that needs to be addressed if you want to ensure the same quality of service for your customers.</p>
 <p>A simple way of quantifying the mismatch between the required resources and the available resources is to measure the space between the actual load and the number of available workers. As pictured below, in the case of static resource allocation, you can see that there&rsquo;s a big gap between the actual load and the available workers — hence, we are wasting resources. For elastic resource allocation, the gap between the red and black line is consistently small.</p>
-<div class="row front-graphic">
+<div>
   <img src="/img/blog/2021-04-reactive-mode/intro.svg" width="640px" alt="Reactive Mode Intro"/>
 </div>
 <p><strong>Manually rescaling</strong> a Flink job has been possible since Flink 1.2 introduced <a href="https://flink.apache.org/features/2017/07/04/flink-rescalable-state.html">rescalable state</a>, which allows you to stop-and-restore a job with a different parallelism. For example, if your job is running with a parallelism of p=100 and your load increases, you can restart it with p=200 to cope with the additional data.</p>
@@ -582,7 +581,7 @@ Similarly, Kubernetes provides <a href="https://kubernetes.io/docs/tasks/run-app
 </h3>
 <p>The central idea of this demo is to use a Kubernetes <a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">Horizontal Pod Autoscaler</a>, which monitors the CPU load of all TaskManager pods and adjusts their replication factor accordingly. On high CPU load, the autoscaler should add more TaskManagers, distributing the load across more machines. On low load, it should stop TaskManagers to save resources.</p>
 <p>The whole setup is presented here:</p>
-<div class="row front-graphic">
+<div>
   <img src="/img/blog/2021-04-reactive-mode/arch.png" width="640px" alt="Reactive Mode Demo Architecture"/>
 </div>
 <p>Let&rsquo;s discuss the components:</p>
@@ -603,7 +602,7 @@ Similarly, Kubernetes provides <a href="https://kubernetes.io/docs/tasks/run-app
   <a class="anchor" href="#results">#</a>
 </h3>
 <p>We&rsquo;ve deployed all the above components on a hosted Kubernetes cluster, running it for several days. The results are best examined based on the following Grafana dashboard:</p>
-<div class="row front-graphic">
+<div>
   <img src="/img/blog/2021-04-reactive-mode/result.png" alt="Reactive Mode Demo Result"/>
   <p class="align-center">Reactive Mode Experiment Results</p>
 </div>
@@ -628,7 +627,7 @@ Similarly, Kubernetes provides <a href="https://kubernetes.io/docs/tasks/run-app
   <a class="anchor" href="#lessons-learned-configuring-a-low-heartbeat-timeout-for-a-smooth-scale-down">#</a>
 </h3>
 <p>When we initially started with the experiment, we noticed some anomalies in the behavior of Flink, depicted in this chart:</p>
-<div class="row front-graphic">
+<div>
   <img src="/img/blog/2021-04-reactive-mode/high-timeout.png" alt="Reactive Mode Demo Lessons Learned"/>
 	<p class="align-center">Reactive Mode not scaling down properly</p>
 </div>
@@ -648,7 +647,7 @@ Similarly, Kubernetes provides <a href="https://kubernetes.io/docs/tasks/run-app
 <p>The community is actively looking for feedback on this feature, to continue improving Flink&rsquo;s resource elasticity. If you have any feedback, please reach out to the <a href="https://flink.apache.org/community.html#mailing-lists">dev@ mailing list</a> or to me personally on <a href="https://twitter.com/rmetzger_">Twitter</a>.</p>
 </p>
 </article>
- 
+
       
 
       
@@ -657,7 +656,7 @@ Similarly, Kubernetes provides <a href="https://kubernetes.io/docs/tasks/run-app
 
 </div>
   
- 
+
       
 
 
@@ -681,6 +680,7 @@ Similarly, Kubernetes provides <a href="https://kubernetes.io/docs/tasks/run-app
   </main> 
 
   
+
   
 
   <footer>
@@ -757,46 +757,7 @@ Similarly, Kubernetes provides <a href="https://kubernetes.io/docs/tasks/run-app
  
     
   </footer>
-
-  
-    
-      
-    
-
-    
-      
-        
-      
-
-    
-      
-      
-      
-
-      
-        
-      
-
-      
-
-      
-    
-
-    
-    
-      
-    
-    
-      
-        
-      
-    
-    
-  
-
-  
 </body>
-
 </html>
 
 

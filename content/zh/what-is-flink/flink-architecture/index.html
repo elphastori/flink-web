@@ -47,8 +47,8 @@ Flink 用户报告了其生产环境中一些令人印象深刻的扩展性数�
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="alternate" hreflang="en" href="https://flink.apache.org/what-is-flink/flink-architecture/" title="Architecture">
 
-<link rel="stylesheet" href="/book.min.e965b665adeb5b90793c907877b174201ee56713f05abc16ae79fe128f8ddf9a.css" integrity="sha256-6WW2Za3rW5B5PJB4d7F0IB7lZxPwWrwWrnn&#43;Eo&#43;N35o=">
-<script defer src="/zh.search.min.651f706a5aa172576ad0ee45736e6663d8e1630d657cd40ab58d77040e412e25.js" integrity="sha256-ZR9walqhcldq0O5Fc25mY9jhYw1lfNQKtY13BA5BLiU="></script>
+<link rel="stylesheet" href="/book.min.e168028e84e61e0060560516b136d6286255260b0ff17536124f309302d3f8a0.css" integrity="sha256-4WgCjoTmHgBgVgUWsTbWKGJVJgsP8XU2Ek8wkwLT&#43;KA=">
+<script defer src="/zh.search.min.05c6a71cbb922bad92458a394eac58a2288c71058cdfe6c4426534d62acabc2d.js" integrity="sha256-BcanHLuSK62SRYo5TqxYoiiMcQWM3&#43;bEQmU01irKvC0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -453,7 +453,7 @@ https://github.com/alex-shpak/hugo-book
   </ul>
 </nav>
 
- 
+
       </aside>
       <aside class="expand-toc hidden">
         <a class="toc" onclick="expandToc()" href="javascript:void(0)">
@@ -506,9 +506,8 @@ https://github.com/alex-shpak/hugo-book
 
   </aside>
   
- 
-      </header>
 
+      </header>
 
       
 
@@ -522,17 +521,6 @@ https://github.com/alex-shpak/hugo-book
 </h1>
 <p>Apache Flink 是一个框架和分布式处理引擎，用于在<em>无边界和有边界</em>数据流上进行有状态的计算。Flink 能在所有常见集群环境中运行，并能以内存速度和任意规模进行计算。</p>
 <p>接下来，我们来介绍一下 Flink 架构中的重要方面。</p>
-<!--
-<div class="row front-graphic">
-  
-  <img 
-    src="https://flink.apache.org/img/flink-home-graphic-update3.png"
-    alt=""
-    width="800px"
-    style="display:block;margin-left:auto;margin-right:auto"
-  >
-</div>
--->
 <h2 id="处理无界和有界数据">
   处理无界和有界数据
   <a class="anchor" href="#%e5%a4%84%e7%90%86%e6%97%a0%e7%95%8c%e5%92%8c%e6%9c%89%e7%95%8c%e6%95%b0%e6%8d%ae">#</a>
@@ -547,7 +535,7 @@ https://github.com/alex-shpak/hugo-book
 <p><strong>有界流</strong> 有定义流的开始，也有定义流的结束。有界流可以在摄取所有数据后再进行计算。有界流所有数据可以被排序，所以并不需要有序摄取。有界流处理通常被称为批处理</p>
 </li>
 </ol>
-<div class="row front-graphic">
+<div>
   
   <img 
     src="https://flink.apache.org/img/bounded-unbounded.png"
@@ -574,7 +562,7 @@ Flink 提供了两种应用程序部署模式，即 *框架模式* 和 *库模�
 
 * 在 **库部署模式中**，Flink 应用程序与 Flink 主可执行程序一起打包成 (Docker) 映像。另一个独立于作业的映像包含可执行的 Flink 工作程序。当从作业映像启动容器时，将启动 Flink 主进程并自动加载嵌入的应用程序。从工作镜像启动的容器，引导 Flink 工作进程自动连接到主进程。容器管理器（比如 Kubernetes）监控正在运行的容器并自动重启失败的容器。在这种模式下，你不需要在集群中安装和维护 Flink 服务。只需将 Flink 作为库打包到应用程序中。这种模型在部署微服务时非常流行。
 
-<div class="row front-graphic">
+<div>
   
   <img 
     src="https://flink.apache.org/img/deployment-modes.png"
@@ -601,7 +589,7 @@ Flink 提供了两种应用程序部署模式，即 *框架模式* 和 *库模�
   <a class="anchor" href="#%e5%88%a9%e7%94%a8%e5%86%85%e5%ad%98%e6%80%a7%e8%83%bd">#</a>
 </h2>
 <p>有状态的 Flink 程序针对本地状态访问进行了优化。任务的状态始终保留在内存中，如果状态大小超过可用内存，则会保存在能高效访问的磁盘数据结构中。任务通过访问本地（通常在内存中）状态来进行所有的计算，从而产生非常低的处理延迟。Flink 通过定期和异步地对本地状态进行持久化存储来保证故障场景下精确一次的状态一致性。</p>
-<div class="row front-graphic">
+<div>
   
   <img 
     src="https://flink.apache.org/img/local-state.png"
@@ -610,7 +598,7 @@ Flink 提供了两种应用程序部署模式，即 *框架模式* 和 *库模�
     style="display:block;margin-left:auto;margin-right:auto"
   >
 </div></article>
- 
+
       
 
       
@@ -619,7 +607,7 @@ Flink 提供了两种应用程序部署模式，即 *框架模式* 和 *库模�
 
 </div>
   
- 
+
       
 
 
@@ -645,6 +633,7 @@ Flink 提供了两种应用程序部署模式，即 *框架模式* 和 *库模�
   </main> 
 
   
+
   
 
   <footer>
@@ -721,46 +710,7 @@ Flink 提供了两种应用程序部署模式，即 *框架模式* 和 *库模�
  
     
   </footer>
-
-  
-    
-      
-    
-
-    
-      
-        
-      
-
-    
-      
-      
-      
-
-      
-        
-      
-
-      
-
-      
-    
-
-    
-    
-      
-    
-    
-      
-        
-      
-    
-    
-  
-
-  
 </body>
-
 </html>
 
 
