@@ -43,7 +43,7 @@ Apache Flink 功能强大，支持开发和运行多种不同种类的应用程�
 相反，事件驱动型应用是基于状态化流处理来完成。在该设计中，数据和计算不会分离，应用只需访问本地（内存或磁盘）即可获取数据。系统容错性的实现依赖于定期向远程持久化存储写入 checkpoint。下图描述了传统应用和事件驱动型应用架构的区别。
 
 <br>
-<div class="row front-graphic">
+<div>
   {{< img src="/img/usecases-eventdrivenapps.png" width="700px" >}}
 </div>
 
@@ -75,7 +75,7 @@ Flink 中针对事件驱动应用的明星特性当属 savepoint。Savepoint 是
 
 如下图所示，Apache Flink 同时支持流式及批量分析应用。
 
-<div class="row front-graphic">
+<div>
   {{< img src="/img/usecases-analytics.png" width="700px" >}}
 </div>
 
@@ -106,7 +106,7 @@ Flink 为持续流式分析和批量分析都提供了良好的支持。具体�
 
 下图描述了周期性 ETL 作业和持续数据管道的差异。
 
-<div class="row front-graphic">
+<div>
   {{< img src="/img/usecases-datapipelines.png" width="700px" >}}
 </div>
 

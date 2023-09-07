@@ -43,7 +43,7 @@ Event-driven applications are an evolution of the traditional application design
 In contrast, event-driven applications are based on stateful stream processing applications. In this design, data and computation are co-located, which yields local (in-memory or disk) data access. Fault-tolerance is achieved by periodically writing checkpoints to a remote persistent storage. The figure below depicts the difference between the traditional application architecture and event-driven applications.
 
 <br>
-<div class="row front-graphic">
+<div>
   {{< img src="/img/usecases-eventdrivenapps.png" width="700px" >}}
 </div>
 
@@ -75,7 +75,7 @@ With a sophisticated stream processing engine, analytics can also be performed i
 
 Apache Flink supports streaming as well as batch analytical applications as shown in the figure below.
 
-<div class="row front-graphic">
+<div>
   {{< img src="/img/usecases-analytics.png" width="700px" >}}
 </div>
 
@@ -106,7 +106,7 @@ Data pipelines serve a similar purpose as ETL jobs. They transform and enrich da
 
 The figure below depicts the difference between periodic ETL jobs and continuous data pipelines.
 
-<div class="row front-graphic">
+<div>
   {{< img src="/img/usecases-datapipelines.png" width="700px" >}}
 </div>
 

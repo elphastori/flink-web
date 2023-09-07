@@ -1,7 +1,7 @@
 ---
 title: Apache Flink® — Stateful Computations over Data Streams
 type: docs
-bookToc: false
+hero: true
 ---
 <!--
 Licensed to the Apache Software Foundation (ASF) under one
