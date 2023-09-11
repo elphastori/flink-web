@@ -26,9 +26,7 @@ under the License.
     <div class="title">Flink Capabilities</div>
     <div class="wrapper">
         <div class="panel">
-            <div class="icon">
-                <img src="/img/flink-compatibility-icon.svg">
-            </div>
+            <div class="icon flink-compatibility-icon"></div>
             <div class="heading">Correctness guarantees</div>
             <div class="body">
                 <p>Exactly-once state consistency</p>
@@ -42,9 +40,7 @@ under the License.
             </div>
         </div>
         <div class="panel">
-            <div class="icon">
-                <img src="/img/flink-layered-apis-icon.svg">
-            </div>
+            <div class="icon flink-layered-apis-icon"></div>
             <div class="heading">Layered APIs</div>
             <div class="body">
                 <p>SQL on Stream & Batch Data</p>
@@ -58,9 +54,7 @@ under the License.
             </div>
         </div>
         <div class="panel">
-            <div class="icon">
-                <img src="/img/flink-layered-apis-icon.svg">
-            </div>
+            <div class="icon flink-operational-icon"></div>
             <div class="heading">Operational focus</div>
             <div class="body">
                 <p>Flexible deployment</p>
@@ -74,9 +68,7 @@ under the License.
             </div>
         </div>
         <div class="panel">
-            <div class="icon">
-                <img src="/img/flink-scalability-icon.svg">
-            </div>
+            <div class="icon flink-scalability-icon"></div>
             <div class="heading">Scalability</div>
             <div class="body">
                 <p>Scale-out architecture</p>
@@ -90,9 +82,7 @@ under the License.
             </div>
         </div>
         <div class="panel">
-            <div class="icon">
-                <img src="/img/flink-performance-icon.svg">
-            </div>
+            <div class="icon flink-performance-icon"></div>
             <div class="heading">Performance</div>
             <div class="body">
                 <p>Low latency</p>
@@ -112,27 +102,21 @@ under the License.
     <div class="title">Use Cases</div>
     <div class="wrapper">
         <div class="panel">
-            <div class="icon">
-                <img src="/img/flink-compatibility-icon.svg">
-            </div>
+            <div class="icon flink-event-driven-icon"></div>
             <div class="heading">Event Driven Applications</div>
             <div class="body">
                 <p>An event-driven application is a stateful application that ingest events from one or more event streams and reacts to incoming events by triggering computations, state updates, or external actions.</p>
             </div>
         </div>
         <div class="panel">
-            <div class="icon">
-                <img src="/img/flink-layered-apis-icon.svg">
-            </div>
+            <div class="icon flink-stream-batch-icon"></div>
             <div class="heading">Stream & Batch Analytics</div>
             <div class="body">
                 <p>Analytical jobs extract information and insight from raw data. Traditionally, analytics are performed as batch queries or applications on bounded data sets of recorded events.</p>
             </div>
         </div>
         <div class="panel">
-            <div class="icon">
-                <img src="/img/flink-layered-apis-icon.svg">
-            </div>
+            <div class="icon flink-pipeline-etl-icon"></div>
             <div class="heading">Data Pipelines & ETL</div>
             <div class="body">
                 <p>Extract-transform-load (ETL) is a common approach to convert and move data between storage systems.</p>
