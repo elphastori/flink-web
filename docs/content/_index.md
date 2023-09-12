@@ -60,7 +60,7 @@ under the License.
     .socketTextStream("localhost", 9999)
     .flatMap(new Splitter())
     .keyBy(value -> value.f0)
-    .window(TumblingProcessingTimeWindows.of(Time.seconds(5)))
+    .window(TumblingProcessingTimeWindows.of(Time.seconds(10)))
     .sum(1);</code>
                 </pre>
             </div>
