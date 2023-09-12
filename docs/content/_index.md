@@ -49,21 +49,21 @@ under the License.
     </div>
     <div class="wrapper">
         <div class="tabs">
-        <div class="tab">
-            <div class="tab-item selected">DataStream API</div>
-            <div class="tab-item">Process Function API</div>
-            <div class="tab-item">Table API</div>
-        </div>
-        <div class="tabcontent">
-        <pre tabindex="0">
+            <div class="tab">
+                <div class="tab-item selected">DataStream API</div>
+                <div class="tab-item">Process Function API</div>
+                <div class="tab-item">Table API</div>
+            </div>
+            <div class="tabcontent">
+                <pre tabindex="0">
 <code>DataStream<Tuple2<String, Integer>> dataStream = env
     .socketTextStream("localhost", 9999)
     .flatMap(new Splitter())
     .keyBy(value -> value.f0)
     .window(TumblingProcessingTimeWindows.of(Time.seconds(5)))
     .sum(1);</code>
-        </pre>
-        </div>
+                </pre>
+            </div>
         </div>
     </div>
 </div>
