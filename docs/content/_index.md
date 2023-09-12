@@ -22,6 +22,52 @@ specific language governing permissions and limitations
 under the License.
 -->
 
+<div class="panels code">
+    <div class="wrapper">
+        <div class="buttons">
+            <div class="button">
+                <a href="#">
+                    <span>Java</span>
+                </a>
+            </div>
+            <div class="button unselected">
+                <a href="#">
+                    <span>Scala</span>
+                </a>
+            </div>
+            <div class="button unselected">
+                <a href="#">
+                    <span>SQL</span>
+                </a>
+            </div>
+            <div class="button unselected">
+                <a href="#">
+                    <span>Python</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="tabs">
+        <div class="tab">
+            <div class="tab-item selected">DataStream API</div>
+            <div class="tab-item">Process Function API</div>
+            <div class="tab-item">Table API</div>
+        </div>
+        <div class="tabcontent">
+        <pre tabindex="0">
+<code>DataStream<Tuple2<String, Integer>> dataStream = env
+    .socketTextStream("localhost", 9999)
+    .flatMap(new Splitter())
+    .keyBy(value -> value.f0)
+    .window(TumblingProcessingTimeWindows.of(Time.seconds(5)))
+    .sum(1);</code>
+        </pre>
+        </div>
+        </div>
+    </div>
+</div>
+
 <div class="panels">
     <div class="title">Flink Capabilities</div>
     <div class="wrapper">
